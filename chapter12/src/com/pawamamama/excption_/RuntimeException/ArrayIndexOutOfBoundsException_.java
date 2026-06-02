@@ -1,4 +1,4 @@
-package com.pawamamama.excption_.fiveException;
+package com.pawamamama.excption_.RuntimeException;
 
 /**
  * @author pawamamama
