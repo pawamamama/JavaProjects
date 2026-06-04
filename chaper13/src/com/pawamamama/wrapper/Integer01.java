@@ -29,5 +29,7 @@ public class Integer01 {
 
         //自动拆箱 integer-->int
         int n3 = integer3;//底层仍然使用 integer.intValue();
+        Double d = 1.0;
+        double d2 = d;
     }
 }
