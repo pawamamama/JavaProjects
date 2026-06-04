@@ -16,7 +16,7 @@ public class IntegerAndCharacter {
         //判断是不是大写和小写
         System.out.println(Character.isUpperCase('a'));
         System.out.println(Character.isLowerCase('a'));
-        //判断是不是空格
+        //
         System.out.println(Character.isWhitespace(' '));
         //转换成大写
         System.out.println(Character.toUpperCase('a'));
