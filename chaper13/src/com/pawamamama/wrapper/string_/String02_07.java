@@ -12,9 +12,9 @@ package com.pawamamama.wrapper.string_;
  *
  */
 
-public class String02 {
+public class String02_07 {
     public static void main(String[] args) {
-        /*String s = "pawa";
+        String s = "pawa";
         String s1 = "pawa";
         System.out.println(s.equals(s1));//true
         System.out.println(s == s1);//true
@@ -34,7 +34,6 @@ public class String02 {
         String  string = "hello" +" word";
         //编译器会优化成等价于 String  srting = "hello word";
         //所以是在常量池里面创建了一个对象，并返回引用
-*/
         //1.先创建一个 StringBuilder sb  = new StringBuilder();
         //2.执行StringBuilder append(String str) 方法追加了一个 sb.append("pawa")
         //3.再次执行StringBuilder append(String str) 方法追加了一个 sb.append("mamama")
@@ -43,8 +42,16 @@ public class String02 {
         //5.Stirng = sb.toString();
         String string1 = "pawa";
         String string2 = "mamama";
-        String string3 = string1 + string2;
+        String string3 = string1 + string2;//堆中对象
+        String string4 = "pawamamama";//创建 pool 中对象 值是pawamamama
+        System.out.println(string3 == string4);//false
         //这里不会创建对象，而是拼接之后创建一个在堆中的String对象value[]是pawamamama
-        // 常量池里没有 想要有就intern();方法
+        // 常量池里没有 想要有就intern();方法 intern使用后会把堆中的对象放进pool中
+        String string5 = new String("pa");//在堆
+        String string6 = string5.intern();//发现pool没有就把string5放进pool中,有就返回引用
+        System.out.println(string6 == string5);//true
+        System.out.println("nihao1");
+
+
     }
 }
