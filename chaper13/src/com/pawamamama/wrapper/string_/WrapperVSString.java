@@ -1,10 +1,13 @@
+/*
 package com.pawamamama.wrapper.string_;
 
+*/
 /**
  * @author pawamamama
  * 包装类型和String类型的相互转换。
  *
- */
+ *//*
+
 public class WrapperVSString {
     public static void main(String[] args) {
         //包装类(Integer)->String
@@ -27,3 +30,4 @@ public class WrapperVSString {
 
     }
 }
+*/

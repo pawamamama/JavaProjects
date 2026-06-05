@@ -1,5 +1,7 @@
+/*
 package com.pawamamama.wrapper;
 
+*/
 /**
 @author pawamamama
 import java.sql.Wrapper;==============================
@@ -120,10 +122,12 @@ int n = null;   // 编译错误
 
 包装类 = 基本数据类型对应的对象类型。
 作用是让基本类型拥有对象的能力。
-*/
+*//*
+
 class WrapperType {
     public static void main(String[]args) {
-      /*  byte    -> Byte
+      */
+/*  byte    -> Byte
         short   -> Short
         int     -> Integer
         long    -> Long
@@ -132,7 +136,9 @@ class WrapperType {
         前面的继承Number父类
         char    -> Character
         boolean -> Boolean
-        这两个直接继承obj*/
+        这两个直接继承obj*//*
+
 
     }
 }
+*/
