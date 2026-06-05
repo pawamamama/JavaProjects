@@ -23,5 +23,6 @@ public class WrapperExercise02
         int n2 = 100;
         System.out.println(m2 == n2);//true
         //false false true false false true true
+        System.out.println(m2.toString());
     }
 }
