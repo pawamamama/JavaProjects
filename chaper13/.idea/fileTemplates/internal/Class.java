@@ -3,8 +3,10 @@
 #parse("File Header.java")
 
 /**
+ * ${NAME} 
+ *
  * @author pawamamama
- *Date: ${DATE}
+ * @since ${DATE}
  */
 public class ${NAME} {
 
