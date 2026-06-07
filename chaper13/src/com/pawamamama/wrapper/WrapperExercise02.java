@@ -1,10 +1,8 @@
-/*
 package com.pawamamama.wrapper;
 
-*/
 /**
  * @author pawamamama
- *//*
+ */
 
 public class WrapperExercise02
 {
@@ -29,4 +27,3 @@ public class WrapperExercise02
         System.out.println(m2.toString());
     }
 }
-*/

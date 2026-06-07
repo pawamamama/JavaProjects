@@ -1,7 +1,5 @@
-/*
 package com.pawamamama.wrapper;
 
-*/
 /**
  * @author pawamamama
  * 包装类和基本数据的转换
@@ -9,7 +7,7 @@ package com.pawamamama.wrapper;
  * 装箱：基本类型->包装类型,反之是拆箱
  * 2.JDK5以后含JDK5，的自动装箱和拆箱的方式
  * 自动装箱底层调用的是valueOf方法，比如Integer.valueOf();
- *//*
+ */
 
 public class Integer01 {
     public static void main(String[] args) {
@@ -36,4 +34,3 @@ public class Integer01 {
         double d2 = d;
     }
 }
-*/
