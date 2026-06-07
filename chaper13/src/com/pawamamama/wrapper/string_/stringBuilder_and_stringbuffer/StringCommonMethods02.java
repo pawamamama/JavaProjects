@@ -1,9 +1,5 @@
 package com.pawamamama.wrapper.string_.stringBuilder_and_stringbuffer;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
-import java.awt.event.WindowFocusListener;
-
 /**
  * StringCommonMethods02 Stting常用方法02
  *
