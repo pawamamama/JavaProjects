@@ -32,7 +32,7 @@ package com.pawamamama.wrapper.stringbuffer_;
  *      2.删除和替换是前闭区间后开 [start,end)
  *        删除 替换 为 >=start && <end 处的字符
  *
- *      3插入为从零开始 到offset 后插入
+ *      3插入 offest 的位置向后插入字符串
  *       "hello" 插入 " word"  offest =  4
  *       效果为"hello word"
  * </pre>
@@ -62,6 +62,7 @@ public class StringBufferMethod {
         //5.插入
         stringBuffer.insert(5," world");
         System.out.println(stringBuffer.toString());
-
+        //6.长度
+        System.out.println(stringBuffer.length());
     }
 }
