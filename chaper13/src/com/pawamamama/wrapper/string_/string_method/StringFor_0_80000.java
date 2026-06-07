@@ -1,4 +1,4 @@
-package com.pawamamama.wrapper.string_.stringBuilder_and_stringbuffer;
+package com.pawamamama.wrapper.string_.string_method;
 
 /**
  * String类是保存字符串常量的，每次更新都需要重新开辟空间，效率较低。
