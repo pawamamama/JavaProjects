@@ -1,4 +1,4 @@
-package com.pawamamama.wrapper.string_.stringBuilder_and_stringbuffer;
+package com.pawamamama.wrapper.string_.string_method;
 
 /**
  * StringCommonMethods02 Stting常用方法02
