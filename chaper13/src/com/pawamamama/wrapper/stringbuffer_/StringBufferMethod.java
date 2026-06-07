@@ -32,8 +32,9 @@ package com.pawamamama.wrapper.stringbuffer_;
  *      2.删除和替换是前闭区间后开 [start,end)
  *        删除 替换 为 >=start && <end 处的字符
  *
- *      3插入 offest 的位置向后插入字符串
- *       "hello" 插入 " word"  offest =  4
+ *
+ *      3插入 offest 的位置向后插入字符串 从一开始
+ *       "hello" 插入 " word"  offest =  5
  *       效果为"hello word"
  * </pre>
  *
