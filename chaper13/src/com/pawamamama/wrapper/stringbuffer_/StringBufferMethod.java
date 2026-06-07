@@ -58,7 +58,7 @@ public class StringBufferMethod {
         //4.查找
         //查找指定的字符串，在StringBuffer中第一此出现的索引，如果找不到返回-1
         int indexOf = stringBuffer.indexOf("?");
-        System.out.println();
+        System.out.println(indexOf);
         //5.插入
         stringBuffer.insert(5," world");
         System.out.println(stringBuffer.toString());
