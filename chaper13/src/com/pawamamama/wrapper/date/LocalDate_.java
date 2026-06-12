@@ -1,8 +1,11 @@
 package com.pawamamama.wrapper.date;
 
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 /**
  * LocalDate、LocalTime、LocalDateTime 使用演示
@@ -71,7 +74,33 @@ public class LocalDate_ {
         System.out.println(localDate);
         LocalTime localTime = now.toLocalTime();
         System.out.println(localTime);
-
     }
 
+}
+class DateTimeFormatter_ {
+    public static void main(String[] args) {
+        //格式化日期类
+        //DateTimeFormatter.ofPattern("yyyy年MM月dd日HH时mm分ss秒");规定格式MM 数字月份 HH 0-23
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy年MM月dd日HH时mm分ss秒");
+        //放入一个三代日期对象进行格式化之后format返回一个String
+       String dtf =  dateTimeFormatter.format(LocalDateTime.now());
+        System.out.println(dtf);
+
+    }
+}
+class Instant_ {
+    /*时间戳
+        类似Date 提供了一系列和Date类转换的方式
+    */
+    public static void main(String[] args) {
+        //Instant 时间戳
+        Instant instant = Instant.now();
+        System.out.println(instant);
+        //转换
+        //Instant --> Date
+        Date date = Date.from(instant);
+        //Date --> Instant
+        Instant instant2 = date.toInstant();
+
+    }
 }
