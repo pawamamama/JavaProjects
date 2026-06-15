@@ -35,7 +35,10 @@ public class LIstExericse {
 
         // 编译类型 List，运行类型 ArrayList
         List list = new ArrayList();
-
+        //循环添加元素
+        for (int i = 1; i <11 ; i++) {
+            list.add("hello"+i);
+        }
         // 添加 10 个元素
         list.add("Tom");
         list.add("Jack");
