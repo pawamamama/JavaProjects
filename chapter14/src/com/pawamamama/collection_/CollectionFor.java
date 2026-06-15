@@ -30,9 +30,11 @@ public class CollectionFor {
         // =========================
         // 增强 for 循环（核心）
         // =========================
+        //快捷键 大写 I
         for (Book2 book : col) {
             System.out.println(book);
         }
+
         //增强 for 遍历数组
         int[] arr = {10, 20, 30, 40, 50};
         for (int num : arr) {
