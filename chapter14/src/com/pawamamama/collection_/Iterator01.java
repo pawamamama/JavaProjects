@@ -114,9 +114,9 @@ public class Iterator01 {
      Collection collection = new ArrayList<>();
 
      // 添加数据
-     collection.add(new Book("Java基础", 50));
-     collection.add(new Book("数据结构", 70));
-     collection.add(new Book("算法导论", 120));
+     collection.add(new Book2("Java基础", 50));
+     collection.add(new Book2("数据结构", 70));
+     collection.add(new Book2("算法导论", 120));
      collection.add("String");//都可以存放
      //直接使用toString，获取全部
      System.out.println("collection = "+collection);
