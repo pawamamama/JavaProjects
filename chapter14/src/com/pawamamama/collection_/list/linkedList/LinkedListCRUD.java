@@ -1,5 +1,6 @@
 package com.pawamamama.collection_.list.linkedList;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
@@ -31,6 +32,7 @@ import java.util.LinkedList;
  *      - 将删除节点的引用置空，帮助 GC 回收。
  * 4. get(index) 会根据 index 是否位于前半部分，
  *    决定从 first 或 last 开始遍历，提高查找效率。
+ * 5. 遍历可以是迭代的方式
  *
  * 注意：
  * LinkedList 擅长插入、删除操作，
@@ -58,7 +60,12 @@ public class LinkedListCRUD {
         list.set(0,"wangweixin");
         //得到节点对象、
         System.out.println(list.get(0));
-
+        //遍历方式可以是迭代器
+        Iterator itr = list.iterator();
+        while (itr.hasNext()) {
+            Object o = itr.next();
+            System.out.println();
+        }
         /*源码解读
         LinkedList list = new LinkedList();
         1. public LinkedList() {}空构造器
