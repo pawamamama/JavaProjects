@@ -44,7 +44,7 @@ public class TreeSet01 {
         set.add("mamam");
         System.out.println("treeSet = " + set);
         /*  1. 构造器把传入的比较器对象给到  TreeSet 的底层的TreeMap构造器
-        *   public TreeMap(Comparator<? super K> comparator) {
+        *   public TreeMap_(Comparator<? super K> comparator) {
                 this.comparator = comparator;
             }
             2. TreeSet的add方法，其实走的是TreeMap 的 put方法
