@@ -46,6 +46,7 @@ public class TreeMap_ {
         //2.1 第一次添加，把k-v 封装到 Entry 对象，放入 root
         /* Entry<K,V> t = root;
         if (t == null) {
+            //检查key是否为空，如果自己重写的
             compare(key, key); // type (and possibly null) check
 
             root = new Entry<>(key, value, null);
