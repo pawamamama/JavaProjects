@@ -45,6 +45,7 @@ public class GenericDetail {
 
 
         //4.默认泛型是 Object
+        //  只有指定了泛型，返回时才是以指定的类型去返回，因为指定了所以使用时不用向下转型
     }
 
 }
