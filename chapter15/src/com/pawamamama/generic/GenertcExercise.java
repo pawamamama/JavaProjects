@@ -48,7 +48,7 @@ public class GenertcExercise {
         Student s3 = new Student(3, "Cathy");
         Student s4 = new Student(4, "David");
         Student s5 = new Student(5, "Eve");
-        //2.使用泛型 HashMap
+        //2.使用泛型 HashMap，此时已指定k-v
         HashMap<String, Student> map = new HashMap<>();
         map.put("s1", s1);
         map.put("s2", s2);
@@ -73,6 +73,7 @@ public class GenertcExercise {
         // Map.Entry<K, V> 表示 Map 中的一条“键值对记录”
         // 这里 K = String（key类型），V = Student（value类型）
         Set<Map.Entry<String, Student>> entries = map.entrySet();
+        //HashMap已经指定过了k-v 所以entrySet 自动填充k-v
         //Set存放Map.Entry类型
         //Map.Entry里存放k and v 并且是指定类型，编译器知道所以不用转型
         //增强for
