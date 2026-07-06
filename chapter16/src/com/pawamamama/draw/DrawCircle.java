@@ -57,7 +57,7 @@ class MyPanel extends JPanel {
     @Override
     public void paint(Graphics g) {//绘图方法
         super.paint(g);//调用父类的方法完成初始化
-        //System.out.println("paint 方法被调用~");
+        System.out.println("paint 方法被调用~");
         //画出一个圆
         g.drawOval(10, 10, 100, 100);
 
