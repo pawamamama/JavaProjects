@@ -25,6 +25,7 @@ public class pawaTankGame  extends JFrame {
         this.add(mp);
         //设置窗口大小
         this.setSize(1000,750);
+        this.addKeyListener(mp);//监听键盘
         //设置显示 and 默认关闭
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
