@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.Vector;
 
 /**
  * Class: MyPanel
@@ -20,10 +21,22 @@ public class MyPanel extends JPanel implements KeyListener {
 
     //添加玩家坦克
     Hero hero = null;
+    int x = 100;
+    int y = 100;
+    //添加敌方坦克集合
+    Vector<EnemyTank> enemyTanks = new Vector<>();
+    //敌人坦克数量
+    int enemyTanksSize = 3;
 
     //初始化
     public MyPanel() {
-        hero = new Hero(100, 100);//初始化玩家坦克
+        hero = new Hero(x, y);//初始化玩家坦克
+        //for初始化敌人坦克
+        for (int i = 0; i < enemyTanksSize; i++) {
+            EnemyTank enemyTank = new EnemyTank(100 * (i + 1), 0);
+            enemyTank.setDirect(2);
+            enemyTanks.add(enemyTank);
+        }
     }
 
     @Override
@@ -32,8 +45,13 @@ public class MyPanel extends JPanel implements KeyListener {
         //绘制游戏区域
         g.fillRect(0, 0, 1000, 750);
         //绘制坦克到画板
-        //获取修改过的方向
-        drawTank(hero.getX(), hero.getY(), g, hero.getDirect(), 0);
+        //玩家坦克
+        drawTank(hero.getX(), hero.getY(), g, hero.getDirect(), 1);
+        //敌人坦克
+        for (int i = 0; i < enemyTanksSize ; i++) {
+            EnemyTank enemyTank = enemyTanks.get(i);
+            drawTank(enemyTank.getX(),enemyTank.getY(),g,enemyTank.getDirect(),0);
+        }
     }
 
     /**
