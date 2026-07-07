@@ -2,6 +2,8 @@ package com.pawamamama.tank_game_teacher;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 /**
  * Class: MyPanel 坦克大战游戏绘图区域
@@ -9,18 +11,28 @@ import java.awt.*;
  * <pre>
  *     1.画出游戏区域：长1000 宽 750
  *     2.画出tank基本型：封装到一个方法里 drawTank方法，形参查阅类注释
+ *          2.1 完成了tank的四个方向的绘制
+ *     3.通过键盘事件监听让坦克动起来（结合四个方向）绘制
+ *          3.1 规定wasd 控制tank 使用KeyListener实现方法 keyPressed 控制上下左右，和重绘操作
  * </pre>
  *
  * @author pawamamama
  * @date 2026/7/6
  */
 @SuppressWarnings({"all"})
-public class MyPanel extends JPanel {
+//为了监听 键盘事件，实现KeyListener
+public class MyPanel extends JPanel implements KeyListener {
     //定义玩家坦克
     Hero hero = null;
+    //定义玩家初始坐标
+    int x = 100;
+    int y = 100;
 
     public MyPanel() {
-        hero = new Hero(100, 100);//初始化自己的坦克
+        hero = new Hero(x, y);//初始化自己的坦克
+        //设置速度
+        hero.setSpeed(10);
+
     }
 
     @Override
@@ -28,8 +40,16 @@ public class MyPanel extends JPanel {
         super.paint(g);
         //做一个填充矩形
         g.fillRect(0, 0, 1000, 750);//默认是黑色
-        //画出坦克
-        drawTank(hero.getX(), hero.getY(), g, 0, 0);
+        // 测试四个方向坦克
+       /* drawTank(100, 100, g, 0, 1);  // 上
+
+        drawTank(300, 100, g, 1, 0);  // 右
+
+        drawTank(500, 100, g, 2, 1);  // 下
+
+        drawTank(700, 100, g, 3, 0);  // 左*/
+        //每次重绘时获取修改过的坐标和方向来进行重绘
+        drawTank(hero.getX(), hero.getY(), g, hero.getDirect(), 0);
 
     }
 
@@ -48,8 +68,8 @@ public class MyPanel extends JPanel {
         //0.使用 Graphics2D 优化版
         Graphics2D g2 = (Graphics2D) g;
         //1.根据不同类型设置坦克颜色
-        // 0 = 玩家 = 天蓝
-        // 1 = 敌人 = 黄色
+        // 0 = 天蓝
+        // 1 = 黄色
         //先保存一个颜色
         Color base = null;
         switch (type) {
@@ -73,52 +93,122 @@ public class MyPanel extends JPanel {
                     RenderingHints.VALUE_ANTIALIAS_ON
             );
 
-        //2.根据坦克方向绘制坦克
-        // 0 = 上
-        // 1 =
-        // 2
-        // 3
-        switch (direct) {
+            //2.根据坦克方向绘制坦克
+            // direct 表示方向
+            // 0 = 上
+            // 1 = 向右
+            // 2 = 向下
+            // 3 = 向左
+            switch (direct) {
 
-            case 0: // ↑ 上
-                g2.setColor(dark);
-                g2.fill3DRect(x, y, 10, 60, true);
-                g2.fill3DRect(x + 30, y, 10, 60, true);
+                case 0: // ↑ 上
+                    g2.setColor(dark);
+                    g2.fill3DRect(x, y, 10, 60, true);
+                    g2.fill3DRect(x + 30, y, 10, 60, true);
 
-                g2.setColor(base);
-                g2.fill3DRect(x + 10, y + 10, 20, 40, true);
+                    g2.setColor(light);
+                    g2.fill3DRect(x + 10, y + 10, 20, 40, true);
 
-                g2.setColor(light);
-                g2.fillOval(x + 10, y + 20, 20, 20);
+                    g2.setColor(dark);
+                    g2.fillOval(x + 10, y + 20, 20, 20);
 
-                g2.setColor(Color.WHITE);
-                g2.setStroke(new BasicStroke(4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
-                g2.drawLine(x + 20, y + 25, x + 20, y - 15);
-                break;
+                    g2.setColor(Color.WHITE);
+                    g2.setStroke(new BasicStroke(4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+                    g2.drawLine(x + 20, y + 25, x + 20, y - 5);
+                    break;
 
-            case 1: // → 右（先简单镜像）
-                g2.setColor(dark);
-                g2.fill3DRect(x, y, 60, 10, true);
-                g2.fill3DRect(x, y + 30, 60, 10, true);
+                case 1: // → 右（先简单镜像）
+                    g2.setColor(dark);
+                    g2.fill3DRect(x, y, 60, 10, true);
+                    g2.fill3DRect(x, y + 30, 60, 10, true);
 
-                g2.setColor(base);
-                g2.fill3DRect(x + 10, y + 10, 40, 20, true);
+                    g2.setColor(light);
+                    g2.fill3DRect(x + 10, y + 10, 40, 20, true);
 
-                g2.setColor(light);
-                g2.fillOval(x + 20, y + 10, 20, 20);
+                    g2.setColor(dark);
+                    g2.fillOval(x + 20, y + 10, 20, 20);
 
-                g2.setColor(Color.WHITE);
-                g2.setStroke(new BasicStroke(4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
-                g2.drawLine(x + 25, y + 20, x + 60, y + 20);
-                break;
+                    g2.setColor(Color.WHITE);
+                    g2.setStroke(new BasicStroke(4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+                    g2.drawLine(x + 25, y + 20, x + 55, y + 20);
+                    break;
+                case 2: // ↓ 下
+                    g2.setColor(dark);
+                    g2.fill3DRect(x, y, 10, 60, true);
+                    g2.fill3DRect(x + 30, y, 10, 60, true);
 
-            default:
-                System.out.println("没有坦克要处理");
+                    g2.setColor(light);
+                    g2.fill3DRect(x + 10, y + 10, 20, 40, true);
+
+                    g2.setColor(dark);
+                    g2.fillOval(x + 10, y + 20, 20, 20);
+
+                    g2.setColor(Color.WHITE);
+                    g2.setStroke(new BasicStroke(4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+
+                    // 炮管向下
+                    g2.drawLine(x + 20, y + 35, x + 20, y + 65);
+                    break;
+
+
+                case 3: // ← 左
+                    g2.setColor(dark);
+                    g2.fill3DRect(x, y, 60, 10, true);
+                    g2.fill3DRect(x, y + 30, 60, 10, true);
+                    g2.setColor(light);
+                    g2.fill3DRect(x + 10, y + 10, 40, 20, true);
+
+                    g2.setColor(dark);
+                    g2.fillOval(x + 20, y + 10, 20, 20);
+
+                    g2.setColor(Color.WHITE);
+                    g2.setStroke(new BasicStroke(4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+
+                    // 炮管向左
+                    g2.drawLine(x + 25, y + 20, x - 5, y + 20);
+                    break;
+
+                default:
+                    System.out.println("没有坦克要处理");
+            }
+
+        } finally {
+            g2.setColor(oldColor);
+            g2.setStroke(oldStroke);
         }
-
-    } finally {
-        g2.setColor(oldColor);
-        g2.setStroke(oldStroke);
     }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    //处理wasd 键按下的情况
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_W
+                || e.getKeyCode() == KeyEvent.VK_UP) {       // 上
+            hero.setDirect(0);
+            hero.moveUp();
+        } else if (e.getKeyCode() == KeyEvent.VK_D
+                || e.getKeyCode() == KeyEvent.VK_RIGHT) {   // 右
+            hero.setDirect(1);
+            hero.moveRight();
+        } else if (e.getKeyCode() == KeyEvent.VK_S
+                || e.getKeyCode() == KeyEvent.VK_DOWN) {    // 下
+            hero.setDirect(2);
+            hero.moveDown();
+        } else if (e.getKeyCode() == KeyEvent.VK_A
+                || e.getKeyCode() == KeyEvent.VK_LEFT) {    // 左
+            hero.setDirect(3);
+            hero.moveLeft();
+        }
+        //重绘
+        repaint();
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+
     }
 }

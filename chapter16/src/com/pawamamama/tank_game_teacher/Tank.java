@@ -2,9 +2,35 @@ package com.pawamamama.tank_game_teacher;
 
 /**
  * Class: Tank
- *        所有坦克的抽象类
+ * <p>
+ * 所有坦克对象的父类，负责定义坦克共有的属性和行为。
+ * </p>
  *
  * <pre>
+ * Tank类主要包含：
+ * 1. 坦克的位置属性：
+ *    - x：横坐标
+ *    - y：纵坐标
+ *
+ * 2. 坦克运动属性：
+ *    - direct：移动方向
+ *       0 = 上
+ *       1 = 右
+ *       2 = 下
+ *       3 = 左
+ *
+ *    - speed：移动速度
+ *
+ * 3. 坦克移动方法：
+ *    - moveUp()    向上移动
+ *    - moveRight() 向右移动
+ *    - moveDown()  向下移动
+ *    - moveLeft()  向左移动
+ *
+ * 该类作为坦克的基础模型，
+ * 玩家坦克和敌人坦克可以通过继承该类，
+ * 复用公共属性和移动逻辑，并扩展自己的功能。
+ *
  * </pre>
  *
  * @author pawamamama
@@ -16,10 +42,30 @@ public class Tank {
     //坦克的坐标
     private int x;//横
     private int y;//纵
+    //添加坦克的方向
+    private int direct; //0 = 上,1 = 右,2 = 下,3 = 左
+    //添加坦克的速度 初始速度为 5
+    private int speed;
 
     public Tank(int x, int y) {
         this.x = x;
         this.y = y;
+        this.speed = 5;
+    }
+
+    //移动上右下左移动方法
+    public void moveUp() {
+        y -= speed;
+    }
+
+    public void moveRight() {
+        x += speed;
+    }
+    public void moveDown() {
+        y += speed;
+    }
+    public void moveLeft() {
+        x -= speed;
     }
 
     public int getX() {
@@ -36,5 +82,21 @@ public class Tank {
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    public int getDirect() {
+        return direct;
+    }
+
+    public void setDirect(int direct) {
+        this.direct = direct;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
     }
 }
