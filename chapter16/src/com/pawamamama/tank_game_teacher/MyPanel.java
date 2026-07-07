@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.Vector;
 
 /**
  * Class: MyPanel 坦克大战游戏绘图区域
@@ -27,11 +28,24 @@ public class MyPanel extends JPanel implements KeyListener {
     //定义玩家初始坐标
     int x = 100;
     int y = 100;
-
+    //定义敌人坦克，放入到Vector
+    Vector<EnemyTank> enemyTanks = new  Vector<>();
+    //敌人个数，初始化为三
+    int enemyTankSize = 3;
     public MyPanel() {
         hero = new Hero(x, y);//初始化自己的坦克
         //设置速度
-        hero.setSpeed(10);
+        //hero.setSpeed(10);
+        //for循环初始化敌方坦克
+        for (int i = 0; i <enemyTankSize ; i++) {
+            //初始化并横向分布敌方坦克
+            EnemyTank enemyTank = new EnemyTank(150 * (i + 1), 0);
+            //初始绘制炮管为向下所以方向要初始化为2
+            enemyTank.setDirect(2);
+            //加入到集合中
+            enemyTanks.add(enemyTank);
+
+        }
 
     }
 
@@ -40,16 +54,14 @@ public class MyPanel extends JPanel implements KeyListener {
         super.paint(g);
         //做一个填充矩形
         g.fillRect(0, 0, 1000, 750);//默认是黑色
-        // 测试四个方向坦克
-       /* drawTank(100, 100, g, 0, 1);  // 上
-
-        drawTank(300, 100, g, 1, 0);  // 右
-
-        drawTank(500, 100, g, 2, 1);  // 下
-
-        drawTank(700, 100, g, 3, 0);  // 左*/
         //每次重绘时获取修改过的坐标和方向来进行重绘
-        drawTank(hero.getX(), hero.getY(), g, hero.getDirect(), 0);
+        //绘制玩家坦克
+        drawTank(hero.getX(), hero.getY(), g, hero.getDirect(), 1);
+        //绘制出敌方坦克，变量Vector
+        for (int i = 0; i <enemyTankSize ; i++) {
+            EnemyTank enemyTank = enemyTanks.get(i);
+            drawTank(enemyTank.getX(),enemyTank.getY(),g,enemyTank.getDirect(),0);
+        }
 
     }
 
