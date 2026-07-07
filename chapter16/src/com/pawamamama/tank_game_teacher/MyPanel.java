@@ -29,7 +29,7 @@ public class MyPanel extends JPanel {
         //做一个填充矩形
         g.fillRect(0, 0, 1000, 750);//默认是黑色
         //画出坦克
-        drawTank(hero.getX(), hero.getY(), g, 0, 1);
+        drawTank(hero.getX(), hero.getY(), g, 0, 0);
 
     }
 
