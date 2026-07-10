@@ -58,7 +58,7 @@ public class Shot implements Runnable {
             try {
                 Thread.sleep(50);
             } catch (InterruptedException e) {
-              Thread.currentThread().interrupt();
+              e.printStackTrace();
             }
             //根据方向来改变坐标
             switch (direct) {

@@ -60,6 +60,7 @@ public class Shot implements Runnable {
         try {
             Thread.sleep(50);
         } catch (InterruptedException e) {
+            e.printStackTrace();
         }
         switch (direct) {//方向
             case 0://上
