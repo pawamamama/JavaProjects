@@ -74,6 +74,7 @@ public class Shot implements Runnable {
             case  3://左
                 x-=speed;
         }
+        System.out.println(x + " " + y + "方向 = " + direct);
         //子弹超出地图销毁,防御式编程
         if (!(x>= 0&&x <=1000&& y >= 0 &&y <= 750)) {
             //死了
