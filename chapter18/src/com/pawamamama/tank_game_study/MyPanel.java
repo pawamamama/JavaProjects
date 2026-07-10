@@ -207,7 +207,12 @@ public class MyPanel extends JPanel implements KeyListener {
             hero.setDirect(3);
             hero.moveLeft();
         }
+        //按下j键射击
+        if (e.getKeyCode() == KeyEvent.VK_J) {
+            hero.shotEnemyTank();
+        }
         repaint();//重绘
+
     }
 
     @Override

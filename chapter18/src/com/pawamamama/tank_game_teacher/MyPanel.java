@@ -280,6 +280,10 @@ public class MyPanel extends JPanel implements KeyListener {
             hero.setDirect(3);
             hero.moveLeft();
         }
+        //如果用户按下的是 j 就发射子弹
+        if (e.getKeyCode() == KeyEvent.VK_J) {
+            hero.shotEnemyTank();
+        }
         //重绘
         repaint();
     }
