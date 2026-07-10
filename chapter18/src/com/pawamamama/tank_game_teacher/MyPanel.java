@@ -112,77 +112,142 @@ public class MyPanel extends JPanel implements KeyListener {
             // 2 = 向下
             // 3 = 向左
             switch (direct) {
+                case 0: // ↑ 向上
 
-                case 0: // ↑ 上
+                    // 履带
                     g2.setColor(dark);
                     g2.fill3DRect(x, y, 10, 60, true);
                     g2.fill3DRect(x + 30, y, 10, 60, true);
 
+                    // 中心方块
                     g2.setColor(light);
                     g2.fill3DRect(x + 10, y + 10, 20, 40, true);
 
+                    // 中心圆
                     g2.setColor(dark);
                     g2.fillOval(x + 10, y + 20, 20, 20);
 
+                    // 炮管
                     g2.setColor(Color.WHITE);
-                    g2.setStroke(new BasicStroke(4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
-                    g2.drawLine(x + 20, y + 25, x + 20, y - 5);
+                    g2.setStroke(new BasicStroke(
+                            4,
+                            BasicStroke.CAP_ROUND,
+                            BasicStroke.JOIN_ROUND
+                    ));
+
+                    g2.drawLine(
+                            x + 20,
+                            y + 30,
+                            x + 20,
+                            y
+                    );
+
                     break;
 
-                case 1: // → 右（先简单镜像）
+
+                case 1: // → 向右
+
+                    // 履带
                     g2.setColor(dark);
                     g2.fill3DRect(x, y, 60, 10, true);
                     g2.fill3DRect(x, y + 30, 60, 10, true);
 
+                    // 中心方块
                     g2.setColor(light);
                     g2.fill3DRect(x + 10, y + 10, 40, 20, true);
 
+                    // 中心圆
                     g2.setColor(dark);
                     g2.fillOval(x + 20, y + 10, 20, 20);
 
+                    // 炮管
                     g2.setColor(Color.WHITE);
-                    g2.setStroke(new BasicStroke(4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
-                    g2.drawLine(x + 25, y + 20, x + 55, y + 20);
+                    g2.setStroke(new BasicStroke(
+                            4,
+                            BasicStroke.CAP_ROUND,
+                            BasicStroke.JOIN_ROUND
+                    ));
+
+                    g2.drawLine(
+                            x + 30,
+                            y + 20,
+                            x + 60,
+                            y + 20
+                    );
+
                     break;
-                case 2: // ↓ 下
+
+
+                case 2: // ↓ 向下
+
+                    // 履带
                     g2.setColor(dark);
                     g2.fill3DRect(x, y, 10, 60, true);
                     g2.fill3DRect(x + 30, y, 10, 60, true);
 
+                    // 中心方块
                     g2.setColor(light);
                     g2.fill3DRect(x + 10, y + 10, 20, 40, true);
 
+                    // 中心圆
                     g2.setColor(dark);
                     g2.fillOval(x + 10, y + 20, 20, 20);
 
+                    // 炮管
                     g2.setColor(Color.WHITE);
-                    g2.setStroke(new BasicStroke(4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+                    g2.setStroke(new BasicStroke(
+                            4,
+                            BasicStroke.CAP_ROUND,
+                            BasicStroke.JOIN_ROUND
+                    ));
 
-                    // 炮管向下
-                    g2.drawLine(x + 20, y + 35, x + 20, y + 65);
+                    g2.drawLine(
+                            x + 20,
+                            y + 30,
+                            x + 20,
+                            y + 60
+                    );
+
                     break;
 
 
-                case 3: // ← 左
+                case 3: // ← 向左
+
+                    // 履带
                     g2.setColor(dark);
                     g2.fill3DRect(x, y, 60, 10, true);
                     g2.fill3DRect(x, y + 30, 60, 10, true);
+
+                    // 中心方块
                     g2.setColor(light);
                     g2.fill3DRect(x + 10, y + 10, 40, 20, true);
 
+                    // 中心圆
                     g2.setColor(dark);
                     g2.fillOval(x + 20, y + 10, 20, 20);
 
+                    // 炮管
                     g2.setColor(Color.WHITE);
-                    g2.setStroke(new BasicStroke(4, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+                    g2.setStroke(new BasicStroke(
+                            4,
+                            BasicStroke.CAP_ROUND,
+                            BasicStroke.JOIN_ROUND
+                    ));
 
-                    // 炮管向左
-                    g2.drawLine(x + 25, y + 20, x - 5, y + 20);
+                    g2.drawLine(
+                            x + 30,
+                            y + 20,
+                            x,
+                            y + 20
+                    );
+
                     break;
+
 
                 default:
-                    System.out.println("没有坦克要处理");
+                    System.out.println("暂时没有处理");
             }
+
 
         } finally {
             g2.setColor(oldColor);
