@@ -21,6 +21,9 @@ public class pawaTankGame  extends JFrame {
     //构造器
     public pawaTankGame() {
         mp = new MyPanel();
+        //将mp放入Thread
+        Thread thread = new Thread(mp);
+        thread.start();
         //在窗口内添加游戏区域
         this.add(mp);
         //设置窗口大小

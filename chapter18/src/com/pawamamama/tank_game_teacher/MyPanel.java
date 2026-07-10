@@ -1,5 +1,7 @@
 package com.pawamamama.tank_game_teacher;
 
+import com.sun.xml.internal.ws.policy.EffectiveAlternativeSelector;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -22,22 +24,24 @@ import java.util.Vector;
  */
 @SuppressWarnings({"all"})
 //为了监听 键盘事件，实现KeyListener
-public class MyPanel extends JPanel implements KeyListener {
+//为了绘制子弹，要将MyPanel当成一个线程使用
+public class MyPanel extends JPanel implements KeyListener, Runnable{
     //定义玩家坦克
     Hero hero = null;
     //定义玩家初始坐标
     int x = 100;
     int y = 100;
     //定义敌人坦克，放入到Vector
-    Vector<EnemyTank> enemyTanks = new  Vector<>();
+    Vector<EnemyTank> enemyTanks = new Vector<>();
     //敌人个数，初始化为三
     int enemyTankSize = 3;
+
     public MyPanel() {
         hero = new Hero(x, y);//初始化自己的坦克
         //设置速度
         //hero.setSpeed(10);
         //for循环初始化敌方坦克
-        for (int i = 0; i <enemyTankSize ; i++) {
+        for (int i = 0; i < enemyTankSize; i++) {
             //初始化并横向分布敌方坦克
             EnemyTank enemyTank = new EnemyTank(150 * (i + 1), 0);
             //初始绘制炮管为向下所以方向要初始化为2
@@ -55,12 +59,20 @@ public class MyPanel extends JPanel implements KeyListener {
         //做一个填充矩形
         g.fillRect(0, 0, 1000, 750);//默认是黑色
         //每次重绘时获取修改过的坐标和方向来进行重绘
-        //绘制玩家坦克
         drawTank(hero.getX(), hero.getY(), g, hero.getDirect(), 1);
+
+
+        //画出hero射击子弹
+        if (hero.shot != null && hero.shot.isLive == true) {
+            g.setColor(Color.red);
+            System.out.println("子弹被绘制");
+           g.draw3DRect(hero.shot.x,hero.shot.y,1,1,false);
+            g.setColor(Color.black);
+        }
         //绘制出敌方坦克，变量Vector
-        for (int i = 0; i <enemyTankSize ; i++) {
+        for (int i = 0; i < enemyTankSize; i++) {
             EnemyTank enemyTank = enemyTanks.get(i);
-            drawTank(enemyTank.getX(),enemyTank.getY(),g,enemyTank.getDirect(),0);
+            drawTank(enemyTank.getX(), enemyTank.getY(), g, enemyTank.getDirect(), 0);
         }
 
     }
@@ -282,6 +294,7 @@ public class MyPanel extends JPanel implements KeyListener {
         }
         //如果用户按下的是 j 就发射子弹
         if (e.getKeyCode() == KeyEvent.VK_J) {
+            System.out.println("用户按下发射键");
             hero.shotEnemyTank();
         }
         //重绘
@@ -291,5 +304,17 @@ public class MyPanel extends JPanel implements KeyListener {
     @Override
     public void keyReleased(KeyEvent e) {
 
+    }
+    @Override
+    public void run() {//每隔100ms 重绘区域,相当于每隔100ms 刷新绘图区域，子弹就移动
+
+        while (true) {
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            this.repaint();
+        }
     }
 }

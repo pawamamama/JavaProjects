@@ -16,7 +16,7 @@ import java.util.Vector;
  * @date 2026/7/6
  */
 @SuppressWarnings({"all"})
-public class MyPanel extends JPanel implements KeyListener {
+public class MyPanel extends JPanel implements KeyListener,Runnable {
 
 
     //添加玩家坦克
@@ -47,6 +47,12 @@ public class MyPanel extends JPanel implements KeyListener {
         //绘制坦克到画板
         //玩家坦克
         drawTank(hero.getX(), hero.getY(), g, hero.getDirect(), 1);
+        //子弹绘制
+        if ( hero.shot != null && hero.shot.isLive == true) {
+            g.setColor(Color.RED);
+            g.draw3DRect(hero.shot.x, hero.shot.y,1, 1, false);
+            g.setColor(Color.black);
+        }
         //敌人坦克
         for (int i = 0; i < enemyTanksSize ; i++) {
             EnemyTank enemyTank = enemyTanks.get(i);
@@ -218,5 +224,17 @@ public class MyPanel extends JPanel implements KeyListener {
     @Override
     public void keyReleased(KeyEvent e) {
 
+    }
+    @Override
+    public void run() {
+        while (true) {
+            //每隔16ms刷新
+            try {
+                Thread.sleep(16);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            this.repaint();//重绘整个区域
+        }
     }
 }
