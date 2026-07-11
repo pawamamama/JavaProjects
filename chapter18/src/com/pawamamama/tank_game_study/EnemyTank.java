@@ -13,6 +13,8 @@ import java.util.Vector;
  */
 @SuppressWarnings({"all"})
 public class EnemyTank  extends  Tank{
+    //敌人是否存活
+    boolean isLive = true;
     //敌方子弹线程
     Vector<Shot> shots = new Vector();
     public EnemyTank(int x, int y) {
