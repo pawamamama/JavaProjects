@@ -25,7 +25,7 @@ import java.util.Vector;
 @SuppressWarnings({"all"})
 //为了监听 键盘事件，实现KeyListener
 //为了绘制子弹，要将MyPanel当成一个线程使用
-public class MyPanel extends JPanel implements KeyListener, Runnable{
+public class MyPanel extends JPanel implements KeyListener, Runnable {
     //定义玩家坦克
     Hero hero = null;
     //定义玩家初始坐标
@@ -46,6 +46,11 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
             EnemyTank enemyTank = new EnemyTank(150 * (i + 1), 0);
             //初始绘制炮管为向下所以方向要初始化为2
             enemyTank.setDirect(2);
+            //给该enemyTank 加入一颗子弹
+            Shot shot = new Shot(enemyTank.getX() + 20, enemyTank.getY() + 60, enemyTank.getDirect());
+            enemyTank.shots.add(shot);
+            //启动shot对象
+            new Thread(shot).start();
             //加入到集合中
             enemyTanks.add(enemyTank);
 
@@ -56,23 +61,41 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
     @Override
     public void paint(Graphics g) {
         super.paint(g);
-        //做一个填充矩形
-        g.fillRect(0, 0, 1000, 750);//默认是黑色
+        //绘制游戏区域
+        //添加颜色
+        g.setColor(Color.DARK_GRAY);
+        g.fillRect(0, 0, 1000, 750);
+        //恢复默认值
+        g.setColor(Color.black);
+
+        //画坦克
         //每次重绘时获取修改过的坐标和方向来进行重绘
         drawTank(hero.getX(), hero.getY(), g, hero.getDirect(), 1);
-
-
         //画出hero射击子弹
         if (hero.shot != null && hero.shot.isLive == true) {
-            g.setColor(Color.red);
+            g.setColor(Color.white);
             System.out.println("子弹被绘制");
-           g.draw3DRect(hero.shot.x,hero.shot.y,1,1,false);
+            g.draw3DRect(hero.shot.x, hero.shot.y, 1, 1, false);
             g.setColor(Color.black);
         }
         //绘制出敌方坦克，变量Vector
         for (int i = 0; i < enemyTankSize; i++) {
             EnemyTank enemyTank = enemyTanks.get(i);
             drawTank(enemyTank.getX(), enemyTank.getY(), g, enemyTank.getDirect(), 0);
+            //绘制出敌方子弹(所有子弹)
+            for (int j = 0; j <enemyTank.shots.size() ; j++) {
+                //取出子弹
+                Shot shot = enemyTank.shots.get(j);
+                //绘制子弹
+                if (shot != null &&  shot.isLive == true) {
+                    g.setColor(Color.red);
+                    g.draw3DRect(shot.x, shot.y, 1, 1, false);
+                    g.setColor(Color.black);
+                } else {//子弹死亡或者为null时
+                    //从vector移除
+                    enemyTank.shots.remove(shot);
+                }
+            }
         }
 
     }
@@ -305,12 +328,13 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
     public void keyReleased(KeyEvent e) {
 
     }
+
     @Override
     public void run() {//每隔100ms 重绘区域,相当于每隔100ms 刷新绘图区域，子弹就移动
 
         while (true) {
             try {
-                Thread.sleep(100);
+                Thread.sleep(16);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

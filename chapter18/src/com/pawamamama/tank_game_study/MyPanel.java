@@ -35,6 +35,13 @@ public class MyPanel extends JPanel implements KeyListener,Runnable {
         for (int i = 0; i < enemyTanksSize; i++) {
             EnemyTank enemyTank = new EnemyTank(100 * (i + 1), 0);
             enemyTank.setDirect(2);
+            //初始化子弹，后面可以有多个
+            Shot shot = new Shot(enemyTank.getX() + 20, enemyTank.getY() + 60, enemyTank.getDirect());
+            //把子弹放入到Vector集合
+            enemyTank.shots.add(shot);
+            //启动敌人子弹线程
+             new Thread(shot).start();
+
             enemyTanks.add(enemyTank);
         }
     }
@@ -43,13 +50,19 @@ public class MyPanel extends JPanel implements KeyListener,Runnable {
     public void paint(Graphics g) {
         super.paint(g);
         //绘制游戏区域
+        //添加颜色
+        g.setColor(Color.DARK_GRAY);
         g.fillRect(0, 0, 1000, 750);
+        //恢复默认值
+        g.setColor(Color.black);
+
+
         //绘制坦克到画板
         //玩家坦克
         drawTank(hero.getX(), hero.getY(), g, hero.getDirect(), 1);
         //子弹绘制
         if ( hero.shot != null && hero.shot.isLive == true) {
-            g.setColor(Color.RED);
+            g.setColor(Color.white);
             g.draw3DRect(hero.shot.x, hero.shot.y,1, 1, false);
             g.setColor(Color.black);
         }
@@ -57,6 +70,20 @@ public class MyPanel extends JPanel implements KeyListener,Runnable {
         for (int i = 0; i < enemyTanksSize ; i++) {
             EnemyTank enemyTank = enemyTanks.get(i);
             drawTank(enemyTank.getX(),enemyTank.getY(),g,enemyTank.getDirect(),0);
+            //绘制敌人坦克子弹
+            for (int j = 0; j <enemyTank.shots.size() ; j++) {
+                //取出敌人子弹
+                Shot shot = enemyTank.shots.get(j);
+                //绘制敌人子弹前先判断
+                if (shot != null && shot.isLive == true) {
+                    g.setColor(Color.red);
+                    g.draw3DRect(shot.x, shot.y,1, 1, false);
+                    g.setColor(Color.black);
+                }else {//子弹死亡就把它从集合中移除
+                    enemyTank.shots.remove(shot);
+                }
+
+            }
         }
     }
 
