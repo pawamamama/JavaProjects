@@ -76,12 +76,15 @@ public class Shot implements Runnable {
                     break;
             }
             System.out.println(this.x + " " + this.y + " " + this.direct);
+            //当子弹碰到敌人坦克时，也应该结束线程
+            //子弹死亡就应该退出线程
             //当子弹移动到面板的边界时，就应该销毁（把启动的子弹线程销毁）
-            if (!(x >=0 && x<= 1000 && y >=0 && y <= 750)) {
+            if (!(x >=0 && x<= 1000 && y >=0 && y <= 750 && isLive)) {
                 System.out.println("子弹线程退出");
                 isLive = false;//子弹死了
                 break;
             }
+
         }
 
     }

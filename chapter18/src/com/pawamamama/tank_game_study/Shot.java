@@ -77,8 +77,10 @@ public class Shot implements Runnable {
         }
         System.out.println(x + " " + y + "方向 = " + direct);
         //子弹超出地图销毁,防御式编程
-        if (!(x>= 0&&x <=1000&& y >= 0 &&y <= 750)) {
+        //子弹死亡销毁线程
+        if (!(x>= 0&&x <=1000&& y >= 0 &&y <= 750 && isLive)) {
             //死了
+            System.out.println("子弹线程销毁");
             isLive =false;
             break;
         }
