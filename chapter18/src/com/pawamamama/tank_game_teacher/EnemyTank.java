@@ -1,5 +1,8 @@
 package com.pawamamama.tank_game_teacher;
 
+import javax.jws.Oneway;
+import java.util.Vector;
+
 /**
  * Class: EnemyTank
  *
@@ -14,6 +17,8 @@ package com.pawamamama.tank_game_teacher;
  */
 @SuppressWarnings({"all"})
 public class EnemyTank extends  Tank {
+    //在敌人坦克类，使用Vector 保持多个Shot
+    Vector<Shot> shots = new Vector();
     public EnemyTank(int x, int y) {
         super(x, y);
     }

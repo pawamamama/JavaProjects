@@ -1,5 +1,7 @@
 package com.pawamamama.tank_game_study;
 
+import java.util.Vector;
+
 /**
  * Class: EnemyTank 敌方坦克
  *
@@ -11,7 +13,8 @@ package com.pawamamama.tank_game_study;
  */
 @SuppressWarnings({"all"})
 public class EnemyTank  extends  Tank{
-
+    //敌方子弹线程
+    Vector<Shot> shots = new Vector();
     public EnemyTank(int x, int y) {
         super(x, y);
     }
