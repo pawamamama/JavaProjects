@@ -46,6 +46,8 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
             Shot shot = new Shot(enemyTank.getX() + 20, enemyTank.getY() + 60, enemyTank.getDirect());
             //把子弹放入到Vector集合
             enemyTank.shots.add(shot);
+            //启动敌人线程
+            new Thread(enemyTank).start();
             //启动敌人子弹线程
             new Thread(shot).start();
             //加入到集合
@@ -94,7 +96,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
             }
         }
         //敌人坦克
-        for (int i = 0; i < enemyTanksSize; i++) {
+        for (int i = 0; i < enemyTanks.size(); i++) {
             EnemyTank enemyTank = enemyTanks.get(i);
             //判断敌人是否存活
             if (enemyTank.isLive) {
@@ -258,6 +260,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
                     heroShot.isLive = false;
                     //把敌人弄死
                     enemyTank.isLive = false;
+                    enemyTanks.remove(enemyTank);
                     //new 一个爆炸效果
                     Bomb bomb = new Bomb(enemyTank.getX(), enemyTank.getY());
                     bombs.add(bomb);
@@ -271,6 +274,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
                         && heroShot.y < enemyTank.getY() + 40 && heroShot.y > enemyTank.getY()) {
                     heroShot.isLive = false;
                     enemyTank.isLive = false;
+                    enemyTanks.remove(enemyTank);
                     //new 一个爆炸效果
                     Bomb bomb = new Bomb(enemyTank.getX(), enemyTank.getY());
                     bombs.add(bomb);
@@ -331,7 +335,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
             //判断子弹是否打到敌人
             if (hero.shot != null && hero.shot.isLive == true) {
                 //遍历所有敌人的位置
-                for (int i = 0; i < enemyTanksSize; i++) {
+                for (int i = 0; i < enemyTanks.size(); i++) {
                     EnemyTank enemyTank = enemyTanks.get(i);
                     hitTank(hero.shot, enemyTank);
                 }

@@ -34,7 +34,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
     //定义敌人坦克，放入到Vector
     Vector<EnemyTank> enemyTanks = new Vector<>();
     //敌人个数，初始化为三
-    int enemyTankSize = 3;
+    int enemyTankSize = 4;
     //定义一个Vector,用于存放炸弹
     //当子弹击中坦克时，就加入一个Bomb对象到Vector
     Vector<Bomb> bombs = new Vector<>();
@@ -56,6 +56,8 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
             //给该enemyTank 加入一颗子弹
             Shot shot = new Shot(enemyTank.getX() + 20, enemyTank.getY() + 60, enemyTank.getDirect());
             enemyTank.shots.add(shot);
+            //启动敌人坦克线程
+            new Thread(enemyTank).start();
             //启动shot对象
             new Thread(shot).start();
             //加入到集合中
@@ -111,7 +113,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
             }
         }
         //绘制出敌方坦克，遍历Vector
-        for (int i = 0; i < enemyTankSize; i++) {
+        for (int i = 0; i < enemyTanks.size(); i++) {
             EnemyTank enemyTank = enemyTanks.get(i);
             //判断当前敌人是否还存活
             if (enemyTank.isLive) {//还活着的才去画
@@ -339,6 +341,8 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
                     heroShot.isLive = false;
                     //把敌人弄死
                     enemyTank.isLive = false;
+                    //当我们的子弹击中敌人坦克后，将敌人坦克从Vector中去掉
+                    enemyTanks.remove(enemyTank);
                     //创建炸弹对象加入到bombs集合中
                     Bomb bomb = new Bomb(enemyTank.getX(), enemyTank.getY());
                     bombs.add(bomb);
@@ -353,6 +357,8 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
                         && heroShot.y < enemyTank.getY() + 40 && heroShot.y > enemyTank.getY()) {
                     heroShot.isLive = false;
                     enemyTank.isLive = false;
+                    //当我们的子弹击中敌人坦克后，将敌人坦克从Vector中去掉
+                    enemyTanks.remove(enemyTank);
                     //创建炸弹对象加入到bombs集合中
                     Bomb bomb = new Bomb(enemyTank.getX(), enemyTank.getY());
                     bombs.add(bomb);
@@ -411,7 +417,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
             //重绘时判断子弹是否击中了敌人坦克
             //1.判断我方子弹是否还活着
             if (hero.shot != null && hero.shot.isLive) {//子弹活着
-                for (int i = 0; i < enemyTankSize; i++) {
+                for (int i = 0; i < enemyTanks.size(); i++) {
                     //取出坦克,依次对比我方子弹是否击中敌方坦克
                     EnemyTank enemyTank = enemyTanks.get(i);
                     hitTank(hero.shot, enemyTank);
