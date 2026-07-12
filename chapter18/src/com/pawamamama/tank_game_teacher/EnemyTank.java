@@ -10,19 +10,78 @@ import java.util.Vector;
  *      1.有自己的特殊的属性和方法，所以继承tank类，单开一个EnemyTank类去
  *      2.敌人坦克数量多可以放入到集合内进行管理
  *          将来坦克需要多线程需要使用Vector 集合来管理
+ *      3.实现坦克自由移动
  * </pre>
  *
  * @author pawamamama
  * @date 2026/7/7
  */
 @SuppressWarnings({"all"})
-public class EnemyTank extends Tank {
+public class EnemyTank extends Tank implements Runnable {
     //敌人是否存活
     boolean isLive = true;
+    //敌人走一步的步数
+    int go = 30;
+    //敌人休眠时间
+    int sleep = 100;
     //在敌人坦克类，使用Vector 保持多个Shot
     Vector<Shot> shots = new Vector();
 
     public EnemyTank(int x, int y) {
+
         super(x, y);
+        setSpeed(3);
+    }
+    @Override
+    public void run() {
+        while (true) {
+            //根据坦克的方向来继续移动
+            switch (getDirect()) {
+                case 0://上
+                    for (int i = 0; i <go ; i++) {
+                        moveUp();
+
+                        try {
+                            Thread.sleep(sleep);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                    break;
+                case 1:
+                    for (int i = 0; i <go ; i++) {
+                        moveRight();
+
+                        try {
+                            Thread.sleep(sleep);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                    break;
+                case 2:
+                    for (int i = 0; i <go ; i++) {
+                        moveDown();
+                        try {
+                            Thread.sleep(sleep);
+                        } catch (InterruptedException e) {}
+                    }
+                    break;
+                case 3:
+                    for (int i = 0; i <go ; i++) {
+                        moveLeft();
+                        try {
+                            Thread.sleep(sleep);
+                        } catch (InterruptedException e) {}
+                    }
+                    break;
+            }
+            //然后随机的改变坦克方向 0~3的整数
+            setDirect((int)(Math.random() * 4));
+            //写多线程并发程序一定要考虑线程什么时候结束
+            if ((!isLive)) {//死了就退出线程
+                break;
+            }
+        }
     }
 }
