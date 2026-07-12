@@ -15,6 +15,7 @@ public class Hero extends Tank{
     Shot shot= null;
     public Hero(int x, int y) {
         super(x, y);
+        setSpeed(5);
     }
     //子弹射击方法
     public void shotEnemyTank() {

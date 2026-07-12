@@ -20,8 +20,6 @@ public class Tank {
     public Tank(int x, int y) {
         this.x = x;
         this.y = y;
-        //默认三
-        this.speed = 3;
     }
     //移动方法
     public void moveUp() {

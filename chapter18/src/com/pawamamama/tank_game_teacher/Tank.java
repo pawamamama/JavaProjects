@@ -44,13 +44,12 @@ public class Tank {
     private int y;//纵
     //添加坦克的方向
     private int direct; //0 = 上,1 = 右,2 = 下,3 = 左
-    //添加坦克的速度 初始速度为 5
+    //添加坦克的速度
     private int speed;
 
     public Tank(int x, int y) {
         this.x = x;
         this.y = y;
-        this.speed = 5;
     }
 
     //移动上右下左移动方法
