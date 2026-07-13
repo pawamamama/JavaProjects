@@ -26,7 +26,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
     //添加敌方坦克集合
     Vector<EnemyTank> enemyTanks = new Vector<>();
     //敌人坦克数量
-    int enemyTanksSize = 10;
+    int enemyTanksSize = 5;
     //添加爆炸效果集合
     Vector<Bomb> bombs = new Vector<>();
     //添加爆炸效果图片

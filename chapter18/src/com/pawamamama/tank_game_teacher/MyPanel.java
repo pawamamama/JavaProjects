@@ -33,8 +33,8 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
     int y = 100;
     //定义敌人坦克，放入到Vector
     Vector<EnemyTank> enemyTanks = new Vector<>();
-    //敌人个数，初始化为三
-    int enemyTankSize = 10;
+    //敌人个数，初始化为
+    int enemyTankSize = 5;
     //定义一个Vector,用于存放炸弹
     //当子弹击中坦克时，就加入一个Bomb对象到Vector
     Vector<Bomb> bombs = new Vector<>();
