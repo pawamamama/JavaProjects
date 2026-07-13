@@ -52,19 +52,29 @@ public class Tank {
         this.y = y;
     }
 
-    //移动上右下左移动方法
+
+    //移动方法
     public void moveUp() {
-        y -= speed;
+        if (y > 0) {
+            y -= speed;
+        }
     }
 
     public void moveRight() {
-        x += speed;
+        if (x + 60 < 1000) {
+            x += speed;
+        }
     }
+
     public void moveDown() {
-        y += speed;
+        if (y + 60 < 750)
+            y += speed;
     }
+
     public void moveLeft() {
-        x -= speed;
+        if (x > 0) {
+            x -= speed;
+        }
     }
 
     public int getX() {
