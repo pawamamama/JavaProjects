@@ -42,7 +42,7 @@ public class Shot implements Runnable {
     //子弹方向
     int direct;
     //子弹速度
-    int speed = 3;
+    int speed = 5;
     //子弹是否存活
     boolean isLive = true;
 
