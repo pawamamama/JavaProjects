@@ -34,7 +34,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
     //定义敌人坦克，放入到Vector
     Vector<EnemyTank> enemyTanks = new Vector<>();
     //敌人个数，初始化为三
-    int enemyTankSize = 4;
+    int enemyTankSize = 10;
     //定义一个Vector,用于存放炸弹
     //当子弹击中坦克时，就加入一个Bomb对象到Vector
     Vector<Bomb> bombs = new Vector<>();
@@ -50,7 +50,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
         //for循环初始化敌方坦克
         for (int i = 0; i < enemyTankSize; i++) {
             //初始化并横向分布敌方坦克
-            EnemyTank enemyTank = new EnemyTank(150 * (i + 1), 0);
+            EnemyTank enemyTank = new EnemyTank(100 * (i + 1), 0);
             //初始绘制炮管为向下所以方向要初始化为2
             enemyTank.setDirect(2);
             //给该enemyTank 加入一颗子弹
@@ -83,12 +83,17 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
         //画坦克
         //每次重绘时获取修改过的坐标和方向来进行重绘
         drawTank(hero.getX(), hero.getY(), g, hero.getDirect(), 1);
-        //画出hero射击子弹
-        if (hero.shot != null && hero.shot.isLive == true) {
-            g.setColor(Color.white);
-            System.out.println("子弹被绘制");
-            g.draw3DRect(hero.shot.x, hero.shot.y, 1, 1, false);
-            g.setColor(Color.black);
+        //画出hero射击子弹->多颗子弹
+        for (int i = 0; i < hero.shots.size(); i++) {
+            //取出short
+            Shot shot = hero.shots.get(i);
+            if (shot != null && shot.isLive == true) {
+                g.setColor(Color.white);
+                g.draw3DRect(shot.x, shot.y, 1, 1, false);
+                g.setColor(Color.black);
+            } else {//如果该shot对象已经无效，就拿掉
+                hero.shots.remove(shot);
+            }
         }
         //画出炸弹
         //如果bombs集合中有炸弹对象就画出爆炸效果
@@ -102,7 +107,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
             } else if (bomb.life > 3) {
                 //中号图片
                 g.drawImage(image2, bomb.x, bomb.y, 60, 60, this);
-            }else {
+            } else {
                 g.drawImage(image3, bomb.x, bomb.y, 60, 60, this);
             }
             //让炸弹生命值减少
@@ -127,8 +132,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
                         g.setColor(Color.red);
                         g.draw3DRect(shot.x, shot.y, 1, 1, false);
                         g.setColor(Color.black);
-                    } else {//子弹死亡或者为null时
-                        //从vector移除
+                    } else {//子弹死亡或者为null时                        //从vector移除
                         enemyTank.shots.remove(shot);
                     }
                 }
@@ -326,19 +330,38 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
             g2.setStroke(oldStroke);
         }
     }
+    //多颗子弹击中敌人
+    public void hitsTank(Vector<Shot> shots) {
+        //重绘时判断子弹是否击中了敌人坦克
+        //1.判断我方子弹是否还活着
+        for (int i = 0; i < shots.size(); i++) {
+            Shot shot = shots.get(i);
+            if (shot != null && shot.isLive == true) {//判断子弹是否活着
+                for (int j = 0; j < enemyTanks.size(); j++) {
+                    //取出坦克,依次对比我方子弹是否击中敌方坦克
+                    EnemyTank enemyTank = enemyTanks.get(j);
+                    hitTank(shot, enemyTank);
+                }
+            } else {
+                shots.remove(shot);
+            }
+        }
+    }
 
     //编写方法，判读我方子弹是否击中敌人
-    public void hitTank(Shot heroShot, EnemyTank enemyTank) {
+    public void hitTank(Shot shot, EnemyTank enemyTank) {
         //判断是否击中坦克
         switch (enemyTank.getDirect()) {
             case 0:
             case 2:
                 //上和下敌人坦克
                 //认为一样 长60*宽40
-                if (heroShot.x < enemyTank.getX() + 40 && heroShot.x > enemyTank.getX()
-                        && heroShot.y < enemyTank.getY() + 60 && heroShot.y > enemyTank.getY()) {
+                if (shot.x < enemyTank.getX() + 40 && shot.x > enemyTank.getX()
+                        && shot.y < enemyTank.getY() + 60 && shot.y > enemyTank.getY()) {
                     //把我方子弹设置为已死亡
-                    heroShot.isLive = false;
+                    shot.isLive = false;
+                    //把子弹从集合中去掉
+                    hero.shots.remove(shot);
                     //把敌人弄死
                     enemyTank.isLive = false;
                     //当我们的子弹击中敌人坦克后，将敌人坦克从Vector中去掉
@@ -353,9 +376,11 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
             case 1:
             case 3:
                 //左和右敌人坦克认为一样 x =40 * y =60
-                if (heroShot.x < enemyTank.getX() + 60 && heroShot.x > enemyTank.getX()
-                        && heroShot.y < enemyTank.getY() + 40 && heroShot.y > enemyTank.getY()) {
-                    heroShot.isLive = false;
+                if (shot.x < enemyTank.getX() + 60 && shot.x > enemyTank.getX()
+                        && shot.y < enemyTank.getY() + 40 && shot.y > enemyTank.getY()) {
+                    shot.isLive = false;
+                    //把子弹从集合中去掉
+                    hero.shots.remove(shot);
                     enemyTank.isLive = false;
                     //当我们的子弹击中敌人坦克后，将敌人坦克从Vector中去掉
                     enemyTanks.remove(enemyTank);
@@ -393,7 +418,6 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
         }
         //如果用户按下的是 j 就发射子弹
         if (e.getKeyCode() == KeyEvent.VK_J) {
-            System.out.println("用户按下发射键");
             hero.shotEnemyTank();
         }
         //重绘
@@ -414,15 +438,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            //重绘时判断子弹是否击中了敌人坦克
-            //1.判断我方子弹是否还活着
-            if (hero.shot != null && hero.shot.isLive) {//子弹活着
-                for (int i = 0; i < enemyTanks.size(); i++) {
-                    //取出坦克,依次对比我方子弹是否击中敌方坦克
-                    EnemyTank enemyTank = enemyTanks.get(i);
-                    hitTank(hero.shot, enemyTank);
-                }
-            }
+            hitsTank(hero.shots);//判断玩家子弹击中坦克
             this.repaint();
         }
     }
