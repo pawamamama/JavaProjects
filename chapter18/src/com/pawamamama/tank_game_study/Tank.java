@@ -16,7 +16,7 @@ public class Tank {
     private int y;
     private int direct;
     private int speed;
-
+    boolean isLive = true;
     //构造器
     public Tank(int x, int y) {
         this.x = x;

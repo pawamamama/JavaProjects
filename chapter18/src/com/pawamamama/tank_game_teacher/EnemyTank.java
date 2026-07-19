@@ -18,8 +18,6 @@ import java.util.Vector;
  */
 @SuppressWarnings({"all"})
 public class EnemyTank extends Tank implements Runnable {
-    //敌人是否存活
-    boolean isLive = true;
     //敌人走一步的步数
     int go = 30;
     //敌人休眠时间
@@ -123,5 +121,12 @@ public class EnemyTank extends Tank implements Runnable {
                 break;
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return  "EnemyTank{" +
+                "shots=" + shots +
+                '}';
     }
 }

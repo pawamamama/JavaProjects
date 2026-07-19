@@ -13,8 +13,7 @@ import java.util.Vector;
  */
 @SuppressWarnings({"all"})
 public class EnemyTank extends Tank implements Runnable {
-    //敌人是否存活
-    boolean isLive = true;
+
     int go = 30;
     int sleep = 100;
     //敌方子弹线程

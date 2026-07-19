@@ -15,6 +15,7 @@ import java.util.Vector;
  */
 @SuppressWarnings({"all"})
 public class Hero extends Tank {
+
     //定义一个Shot对象，表示一个射击行为(线程)
     Shot shot = null;
     //可以发射多颗子弹

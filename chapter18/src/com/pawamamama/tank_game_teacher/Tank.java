@@ -39,6 +39,8 @@ package com.pawamamama.tank_game_teacher;
 @SuppressWarnings({"all"})
 public class Tank {
     //属性部分
+    //存活状态
+    boolean isLive = true;
     //坦克的坐标
     private int x;//横
     private int y;//纵
