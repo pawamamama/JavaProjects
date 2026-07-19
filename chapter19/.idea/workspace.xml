@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5b9632c3-4337-41b7-bb76-9d423a223a6b" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/pawamamama/file_/FileCreate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter19.iml" beforeDir="false" afterPath="$PROJECT_DIR$/chapter19.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="5" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000000015447281" />
+      <entry key="MS500" value="1.0179156939436111" />
+      <entry key="S2" value="1.5208319325581385" />
+      <entry key="S5" value="2.1447686087688895" />
+      <entry key="S10" value="2.5079681032492323" />
+      <entry key="S30" value="2.8218240285215352" />
+      <entry key="S60" value="3.084968806622054" />
+      <entry key="M2" value="4.448743523381714" />
+      <entry key="M5" value="8.606692259699383" />
+      <entry key="M10" value="11.836346582750542" />
+      <entry key="M15" value="13.29459309470645" />
+      <entry key="M30" value="15.001115593441902" />
+      <entry key="H1" value="15.960955736302589" />
+      <entry key="H2" value="16.470166255354098" />
+      <entry key="H4" value="16.73245190363708" />
+      <entry key="D1" value="16.95503858413283" />
+      <entry key="W1" value="16.99356781687399" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="8.981729841518422E-14" />
+      <entry key="MS500" value="0.0024585101045016752" />
+      <entry key="S2" value="0.22267322515167023" />
+      <entry key="S5" value="0.5483618081131959" />
+      <entry key="S10" value="0.7405146118768349" />
+      <entry key="S30" value="0.9100575133000889" />
+      <entry key="S60" value="1.093760501349881" />
+      <entry key="M2" value="1.8357801856637699" />
+      <entry key="M5" value="3.6930382872095318" />
+      <entry key="M10" value="5.006970461395209" />
+      <entry key="M15" value="5.580670233322658" />
+      <entry key="M30" value="6.240446420623724" />
+      <entry key="H1" value="6.60680903680067" />
+      <entry key="H2" value="6.799925036539516" />
+      <entry key="H4" value="6.899076361817462" />
+      <entry key="D1" value="6.983054907964529" />
+      <entry key="W1" value="6.997576205394023" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9460576481769039" />
+      <entry key="MS500" value="1.0073240672342794" />
+      <entry key="S2" value="1.6697603493574802" />
+      <entry key="S5" value="2.61281225346022" />
+      <entry key="S10" value="3.192042658540849" />
+      <entry key="S30" value="3.708052897912963" />
+      <entry key="S60" value="4.163149768345866" />
+      <entry key="M2" value="6.268120424229873" />
+      <entry key="M5" value="12.284206308668859" />
+      <entry key="M10" value="16.832357119274135" />
+      <entry key="M15" value="18.867024581278766" />
+      <entry key="M30" value="21.23690645340918" />
+      <entry key="H1" value="22.565288104792145" />
+      <entry key="H2" value="23.26881371620241" />
+      <entry key="H4" value="23.630879403750324" />
+      <entry key="D1" value="23.93798392643778" />
+      <entry key="W1" value="23.991128334903202" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3GivfyQH7yxXbniChs9v4ZYplaV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.FileCreate.create1.executor": "Run",
+    "JUnit.FileCreate.create2.executor": "Run",
+    "JUnit.FileCreate.create3.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.FileCreate.create3">
+    <configuration name="FileCreate.create1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chapter19" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pawamamama.file_.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.pawamamama.file_" />
+      <option name="MAIN_CLASS_NAME" value="com.pawamamama.file_.FileCreate" />
+      <option name="METHOD_NAME" value="create1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileCreate.create2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chapter19" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pawamamama.file_.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.pawamamama.file_" />
+      <option name="MAIN_CLASS_NAME" value="com.pawamamama.file_.FileCreate" />
+      <option name="METHOD_NAME" value="create2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileCreate.create3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chapter19" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pawamamama.file_.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.pawamamama.file_" />
+      <option name="MAIN_CLASS_NAME" value="com.pawamamama.file_.FileCreate" />
+      <option name="METHOD_NAME" value="create3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.FileCreate.create3" />
+        <item itemvalue="JUnit.FileCreate.create2" />
+        <item itemvalue="JUnit.FileCreate.create1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="5b9632c3-4337-41b7-bb76-9d423a223a6b" name="更改" comment="" />
+      <created>1784467311474</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1784467311474</updated>
+      <workItem from="1784467313717" duration="817000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
