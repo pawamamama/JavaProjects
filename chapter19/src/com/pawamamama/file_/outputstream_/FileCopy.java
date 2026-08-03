@@ -3,10 +3,7 @@ package com.pawamamama.file_.outputstream_;
 import com.pawamamama.file_.inputstream_.FileInputStream_;
 import org.junit.jupiter.api.Test;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * Class: FileCopy

@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b9632c3-4337-41b7-bb76-9d423a223a6b" name="更改" comment="chapter19 io流学习-字节输出流">
-      <change afterPath="$PROJECT_DIR$/src/com/pawamamama/file_/outputstream_/FileCopy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/pawamamama/file_/outputstream_/txt_/微信图片_20251030133755_62_34.jpg" afterDir="false" />
+    <list default="true" id="5b9632c3-4337-41b7-bb76-9d423a223a6b" name="更改" comment="chapter19 io流学习-文件拷贝">
+      <change afterPath="$PROJECT_DIR$/src/com/pawamamama/reader_/FileReader01.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pawamamama/file_/FileCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pawamamama/file_/FileCreate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pawamamama/file_/outputstream_/FileCopy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pawamamama/file_/outputstream_/FileCopy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="15" />
+    <option name="cachedIndexableFilesCount" value="20" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -33,61 +34,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="2.8871388144701996E-5" />
-      <entry key="MS500" value="0.12362136454761644" />
-      <entry key="S2" value="0.5929578163706968" />
-      <entry key="S5" value="0.8145240602983554" />
-      <entry key="S10" value="0.9570711899545137" />
-      <entry key="S30" value="1.353167000361445" />
-      <entry key="S60" value="1.7854323990748644" />
-      <entry key="M2" value="3.434908717988519" />
-      <entry key="M5" value="10.365154342801139" />
-      <entry key="M10" value="19.793453421151973" />
-      <entry key="M15" value="28.100693936901894" />
-      <entry key="M30" value="50.3611448211504" />
-      <entry key="H1" value="82.77301058220854" />
-      <entry key="H2" value="119.57885492549798" />
-      <entry key="H4" value="151.6144735226313" />
-      <entry key="D1" value="191.8160841091454" />
-      <entry key="W1" value="200.49236006168903" />
+      <entry key="MS100" value="1.0000000000026186" />
+      <entry key="MS500" value="1.0064111414295296" />
+      <entry key="S2" value="1.4631666316834777" />
+      <entry key="S5" value="2.111511822955424" />
+      <entry key="S10" value="2.4912931582204747" />
+      <entry key="S30" value="3.1666542942556895" />
+      <entry key="S60" value="5.2552615995428615" />
+      <entry key="M2" value="9.805396074736231" />
+      <entry key="M5" value="20.26823913104219" />
+      <entry key="M10" value="32.67420278073867" />
+      <entry key="M15" value="42.64086862844011" />
+      <entry key="M30" value="68.01058076528486" />
+      <entry key="H1" value="106.45420795807036" />
+      <entry key="H2" value="152.3246314991154" />
+      <entry key="H4" value="193.67085531239445" />
+      <entry key="D1" value="247.18034645596725" />
+      <entry key="W1" value="258.9476847803254" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0000000000000158" />
-      <entry key="MS500" value="1.0017342029485081" />
-      <entry key="S2" value="1.2318580135704837" />
-      <entry key="S5" value="1.8034986149895755" />
-      <entry key="S10" value="2.5068848166568154" />
-      <entry key="S30" value="4.026433709429357" />
-      <entry key="S60" value="4.911639884525593" />
-      <entry key="M2" value="6.209525359227377" />
-      <entry key="M5" value="10.817930468356497" />
-      <entry key="M10" value="17.750152311923642" />
-      <entry key="M15" value="23.98868075033195" />
-      <entry key="M30" value="41.045364066594836" />
-      <entry key="H1" value="66.60487201825936" />
-      <entry key="H2" value="94.76682208461908" />
-      <entry key="H4" value="118.09846276295518" />
-      <entry key="D1" value="146.09215268439945" />
-      <entry key="W1" value="151.98146486839832" />
+      <entry key="MS100" value="2.2476672419663906E-300" />
+      <entry key="MS500" value="1.1758352311438317E-60" />
+      <entry key="S2" value="1.0618421333583536E-15" />
+      <entry key="S5" value="1.2276013011451777E-6" />
+      <entry key="S10" value="0.0014682910352511627" />
+      <entry key="S30" value="0.18633150242511118" />
+      <entry key="S60" value="0.7334035079588507" />
+      <entry key="M2" value="2.0357057616656915" />
+      <entry key="M5" value="6.839446054402568" />
+      <entry key="M10" value="13.937157336178837" />
+      <entry key="M15" value="20.333211915877214" />
+      <entry key="M30" value="38.230134142017626" />
+      <entry key="H1" value="67.26684596514555" />
+      <entry key="H2" value="102.01511201533789" />
+      <entry key="H4" value="132.41741336983753" />
+      <entry key="D1" value="170.40578865508968" />
+      <entry key="W1" value="178.5802788031048" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="4.1922174776924984E-4" />
-      <entry key="MS500" value="0.22518829568197354" />
-      <entry key="S2" value="1.2263032972082935" />
-      <entry key="S5" value="2.271020638798493" />
-      <entry key="S10" value="3.2388478247287704" />
-      <entry key="S30" value="5.258025353150792" />
-      <entry key="S60" value="6.620108302402589" />
-      <entry key="M2" value="9.589612092918" />
-      <entry key="M5" value="21.13318127719808" />
-      <entry key="M10" value="37.49895667590008" />
-      <entry key="M15" value="52.04869012702979" />
-      <entry key="M30" value="91.37162610327398" />
-      <entry key="H1" value="149.34962780918147" />
-      <entry key="H2" value="214.32573580815185" />
-      <entry key="H4" value="269.7006189112966" />
-      <entry key="D1" value="337.90572460002204" />
-      <entry key="W1" value="352.4734524056253" />
+      <entry key="MS100" value="0.0023714743835950556" />
+      <entry key="MS500" value="0.3009251134031303" />
+      <entry key="S2" value="1.1063885494432038" />
+      <entry key="S5" value="1.900411756947375" />
+      <entry key="S10" value="2.367553391246899" />
+      <entry key="S30" value="3.296329882811882" />
+      <entry key="S60" value="5.943029311646294" />
+      <entry key="M2" value="11.800358002602332" />
+      <entry key="M5" value="27.068813959588507" />
+      <entry key="M10" value="46.57482273862707" />
+      <entry key="M15" value="62.93907137977851" />
+      <entry key="M30" value="106.20808123716512" />
+      <entry key="H1" value="173.692437767053" />
+      <entry key="H2" value="254.31819277104503" />
+      <entry key="H4" value="326.074390176615" />
+      <entry key="D1" value="417.583188105036" />
+      <entry key="W1" value="437.52752331242016" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -114,6 +115,7 @@
     "JUnit.FileInputStream_.readFile01.executor": "Run",
     "JUnit.FileInputStream_.readFile02.executor": "Run",
     "JUnit.FileOutputStream01.writeFile01.executor": "Run",
+    "JUnit.FileReader01.test01.executor": "Run",
     "JUnit.GetFileInformation.info.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Repository.Attach.Annotations": "false",
@@ -137,7 +139,8 @@
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "cn.yiiguxing.plugin.translate",
     "vue.rearranger.settings.migration": "true",
-    "应用程序.FileCopy.executor": "Run"
+    "应用程序.FileCopy.executor": "Run",
+    "应用程序.FileReader01.executor": "Run"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -145,7 +148,7 @@
       <recent name="D:\java_learning\java_code\chapter19\src\com\pawamamama\file_\outputstream_\txt_" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.FileCopy">
+  <component name="RunManager" selected="JUnit.FileReader01.test01">
     <configuration name="FileCopy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.pawamamama.file_.outputstream_.FileCopy" />
       <module name="chapter19" />
@@ -159,34 +162,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Director.m3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileReader01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.pawamamama.reader_.FileReader01" />
       <module name="chapter19" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.pawamamama.file_.*" />
+          <option name="PATTERN" value="com.pawamamama.reader_.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.pawamamama.file_" />
-      <option name="MAIN_CLASS_NAME" value="com.pawamamama.file_.Director" />
-      <option name="METHOD_NAME" value="m3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileInputStream_.readFile01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chapter19" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.pawamamama.file_.inputstream_.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.pawamamama.file_.inputstream_" />
-      <option name="MAIN_CLASS_NAME" value="com.pawamamama.file_.inputstream_.FileInputStream_" />
-      <option name="METHOD_NAME" value="readFile01" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -223,13 +207,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FileReader01.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chapter19" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pawamamama.reader_.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.pawamamama.reader_" />
+      <option name="MAIN_CLASS_NAME" value="com.pawamamama.reader_.FileReader01" />
+      <option name="METHOD_NAME" value="test01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FileReader01.test01" />
+        <item itemvalue="应用程序.FileReader01" />
         <item itemvalue="应用程序.FileCopy" />
         <item itemvalue="JUnit.FileOutputStream01.writeFile01" />
         <item itemvalue="JUnit.FileInputStream_.readFile02" />
-        <item itemvalue="JUnit.FileInputStream_.readFile01" />
-        <item itemvalue="JUnit.Director.m3" />
       </list>
     </recent_temporary>
   </component>
@@ -252,6 +252,7 @@
       <workItem from="1784607667681" duration="2941000" />
       <workItem from="1784635518743" duration="5184000" />
       <workItem from="1785313202759" duration="2500000" />
+      <workItem from="1785758105938" duration="2242000" />
     </task>
     <task id="LOCAL-00001" summary="chapter19 io流学习">
       <option name="closed" value="true" />
@@ -309,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784640674567</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="chapter19 io流学习-文件拷贝">
+      <option name="closed" value="true" />
+      <created>1785758174850</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1785758174850</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +332,8 @@
     <MESSAGE value="chapter19 io流学习-版本管理" />
     <MESSAGE value="chapter19 io流学习-字节输入流完整使用" />
     <MESSAGE value="chapter19 io流学习-字节输出流" />
-    <option name="LAST_COMMIT_MESSAGE" value="chapter19 io流学习-字节输出流" />
+    <MESSAGE value="chapter19 io流学习-文件拷贝" />
+    <option name="LAST_COMMIT_MESSAGE" value="chapter19 io流学习-文件拷贝" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

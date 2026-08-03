@@ -77,7 +77,7 @@ public class FileCreate {
     public void create2() throws IOException {
         String filePath = "D:\\java_learning\\java_code" +
                 "\\chapter19\\src\\com\\pawamamama\\file_\\txt\\";
-        String fileName = "new2.txt";
+        String fileName = "story.txt";
         //这里的file对象，在java中，只是一个对象
         File file = new File(filePath, fileName);
         //只有执行了create方法才真正的创建该文件
