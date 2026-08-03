@@ -1,0 +1,259 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"5b9632c3-4337-41b7-bb76-9d423a223a6b\" name=\"更改\" comment=\"chapter19 io流学习-字节输入流完整使用\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/com/pawamamama/file_/outputstream_/FileOutputStream01.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/com/pawamamama/file_/inputstream_/FileInputStream_.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/com/pawamamama/file_/inputstream_/FileInputStream_.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"EmbeddingIndexingInfo\">\r\n    <option name=\"cachedIndexableFilesCount\" value=\"11\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"McpProjectServerCommands\">\r\n    <commands />\r\n    <urls />\r\n  </component>\r\n  <component name=\"NextEditCompletionFeaturesState\">\r\n    <decayedCancelled>\r\n      <entry key=\"MS100\" value=\"0.0\" />\r\n      <entry key=\"MS500\" value=\"2.0557607172707857E-88\" />\r\n      <entry key=\"S2\" value=\"1.197410716817795E-22\" />\r\n      <entry key=\"S5\" value=\"1.7033239630980465E-9\" />\r\n      <entry key=\"S10\" value=\"4.127134554503964E-5\" />\r\n      <entry key=\"S30\" value=\"0.03456005028899834\" />\r\n      <entry key=\"S60\" value=\"0.18958380036716946\" />\r\n      <entry key=\"M2\" value=\"0.5955514502885318\" />\r\n      <entry key=\"M5\" value=\"2.983730551381592\" />\r\n      <entry key=\"M10\" value=\"9.560747021529082\" />\r\n      <entry key=\"M15\" value=\"17.15607911189372\" />\r\n      <entry key=\"M30\" value=\"38.17678732566272\" />\r\n      <entry key=\"H1\" value=\"67.56539043033342\" />\r\n      <entry key=\"H2\" value=\"100.07210788555709\" />\r\n      <entry key=\"H4\" value=\"127.91689877624827\" />\r\n      <entry key=\"D1\" value=\"162.35650136093156\" />\r\n      <entry key=\"W1\" value=\"169.72234818842603\" />\r\n    </decayedCancelled>\r\n    <decayedSelected>\r\n      <entry key=\"MS100\" value=\"1.0\" />\r\n      <entry key=\"MS500\" value=\"1.0\" />\r\n      <entry key=\"S2\" value=\"1.0\" />\r\n      <entry key=\"S5\" value=\"1.000000005157918\" />\r\n      <entry key=\"S10\" value=\"1.0001016670212415\" />\r\n      <entry key=\"S30\" value=\"1.0812163403440538\" />\r\n      <entry key=\"S60\" value=\"1.4728448394789169\" />\r\n      <entry key=\"M2\" value=\"2.3243316286443143\" />\r\n      <entry key=\"M5\" value=\"5.373108994458665\" />\r\n      <entry key=\"M10\" value=\"10.990587665570658\" />\r\n      <entry key=\"M15\" value=\"16.601220240672692\" />\r\n      <entry key=\"M30\" value=\"32.65992317449247\" />\r\n      <entry key=\"H1\" value=\"55.984907365335076\" />\r\n      <entry key=\"H2\" value=\"80.70685318278099\" />\r\n      <entry key=\"H4\" value=\"100.69515105475126\" />\r\n      <entry key=\"D1\" value=\"124.24834574140236\" />\r\n      <entry key=\"W1\" value=\"129.15331770059387\" />\r\n    </decayedSelected>\r\n    <decayedShown>\r\n      <entry key=\"MS100\" value=\"0.0015323908162045907\" />\r\n      <entry key=\"MS500\" value=\"0.27357342531518486\" />\r\n      <entry key=\"S2\" value=\"0.7232167516701093\" />\r\n      <entry key=\"S5\" value=\"0.8784304742596813\" />\r\n      <entry key=\"S10\" value=\"0.9373806215162472\" />\r\n      <entry key=\"S30\" value=\"1.0921751485173095\" />\r\n      <entry key=\"S60\" value=\"1.6453964173309075\" />\r\n      <entry key=\"M2\" value=\"2.904796425848961\" />\r\n      <entry key=\"M5\" value=\"8.337540676358906\" />\r\n      <entry key=\"M10\" value=\"20.528843704430578\" />\r\n      <entry key=\"M15\" value=\"33.73347731454416\" />\r\n      <entry key=\"M30\" value=\"70.81146866550006\" />\r\n      <entry key=\"H1\" value=\"123.52786372821937\" />\r\n      <entry key=\"H2\" value=\"180.76268087730637\" />\r\n      <entry key=\"H4\" value=\"228.60192011911008\" />\r\n      <entry key=\"D1\" value=\"286.602776756371\" />\r\n      <entry key=\"W1\" value=\"298.8753588968745\" />\r\n    </decayedShown>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 3,\r\n  &quot;fromUser&quot;: false\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"3GivfyQH7yxXbniChs9v4ZYplaV\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Downloaded.Files.Path.Enabled\": \"false\",\r\n    \"JUnit.Director.m1.executor\": \"Run\",\r\n    \"JUnit.Director.m2.executor\": \"Run\",\r\n    \"JUnit.Director.m3.executor\": \"Run\",\r\n    \"JUnit.FileCreate.create1.executor\": \"Run\",\r\n    \"JUnit.FileCreate.create2.executor\": \"Run\",\r\n    \"JUnit.FileCreate.create3.executor\": \"Run\",\r\n    \"JUnit.FileInputStream_.readFile01.executor\": \"Run\",\r\n    \"JUnit.FileInputStream_.readFile02.executor\": \"Run\",\r\n    \"JUnit.FileOutputStream01.writeFile01.executor\": \"Run\",\r\n    \"JUnit.GetFileInformation.info.executor\": \"Run\",\r\n    \"ModuleVcsDetector.initialDetectionPerformed\": \"true\",\r\n    \"Repository.Attach.Annotations\": \"false\",\r\n    \"Repository.Attach.JavaDocs\": \"false\",\r\n    \"Repository.Attach.Sources\": \"false\",\r\n    \"RunOnceActivity.MCP Project settings loaded\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"RunOnceActivity.typescript.service.memoryLimit.init\": \"true\",\r\n    \"codeWithMe.voiceChat.enabledByDefault\": \"false\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"project.structure.last.edited\": \"项目\",\r\n    \"project.structure.proportion\": \"0.0\",\r\n    \"project.structure.side.proportion\": \"0.0\",\r\n    \"settings.editor.selected.configurable\": \"cn.yiiguxing.plugin.translate\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\" selected=\"JUnit.FileOutputStream01.writeFile01\">\r\n    <configuration name=\"Director.m2\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"chapter19\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.pawamamama.file_.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"com.pawamamama.file_\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.pawamamama.file_.Director\" />\r\n      <option name=\"METHOD_NAME\" value=\"m2\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Director.m3\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"chapter19\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.pawamamama.file_.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"com.pawamamama.file_\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.pawamamama.file_.Director\" />\r\n      <option name=\"METHOD_NAME\" value=\"m3\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"FileInputStream_.readFile01\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"chapter19\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.pawamamama.file_.inputstream_.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"com.pawamamama.file_.inputstream_\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.pawamamama.file_.inputstream_.FileInputStream_\" />\r\n      <option name=\"METHOD_NAME\" value=\"readFile01\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"FileInputStream_.readFile02\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"chapter19\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.pawamamama.file_.inputstream_.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"com.pawamamama.file_.inputstream_\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.pawamamama.file_.inputstream_.FileInputStream_\" />\r\n      <option name=\"METHOD_NAME\" value=\"readFile02\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"FileOutputStream01.writeFile01\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"chapter19\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.pawamamama.file_.outputstream_.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"com.pawamamama.file_.outputstream_\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.pawamamama.file_.outputstream_.FileOutputStream01\" />\r\n      <option name=\"METHOD_NAME\" value=\"writeFile01\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.FileOutputStream01.writeFile01\" />\r\n        <item itemvalue=\"JUnit.FileInputStream_.readFile02\" />\r\n        <item itemvalue=\"JUnit.FileInputStream_.readFile01\" />\r\n        <item itemvalue=\"JUnit.Director.m3\" />\r\n        <item itemvalue=\"JUnit.Director.m2\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95\" />\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"默认任务\">\r\n      <changelist id=\"5b9632c3-4337-41b7-bb76-9d423a223a6b\" name=\"更改\" comment=\"\" />\r\n      <created>1784467311474</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1784467311474</updated>\r\n      <workItem from=\"1784467313717\" duration=\"5717000\" />\r\n      <workItem from=\"1784607667681\" duration=\"2941000\" />\r\n      <workItem from=\"1784635518743\" duration=\"5104000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"chapter19 io流学习\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1784468395707</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1784468395708</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"chapter19 io流学习-创建文件的三种方法（构造器）\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1784468420285</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1784468420285</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"chapter19 io流学习-获取文件信息（方法）\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1784469821369</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1784469821369</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"chapter19 io流学习-file方法学习和目录与多级目录创建\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1784638463465</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1784638463466</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"chapter19 io流学习-版本管理\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1784638480857</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1784638480857</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"chapter19 io流学习-字节输入流完整使用\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1784638511421</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1784638511421</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"7\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"chapter19 io流学习\" />\r\n    <MESSAGE value=\"chapter19 io流学习-创建文件的三种方法（构造器）\" />\r\n    <MESSAGE value=\"chapter19 io流学习-获取文件信息（方法）\" />\r\n    <MESSAGE value=\"chapter19 io流学习-file方法学习和目录与多级目录创建\" />\r\n    <MESSAGE value=\"chapter19 io流学习-版本管理\" />\r\n    <MESSAGE value=\"chapter19 io流学习-字节输入流完整使用\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"chapter19 io流学习-字节输入流完整使用\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision f5cf84485b4631ed9b6ee2e7829c54c11126c144)
++++ b/.idea/workspace.xml	(date 1785313537922)
+@@ -4,10 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="5b9632c3-4337-41b7-bb76-9d423a223a6b" name="更改" comment="chapter19 io流学习-字节输入流完整使用">
+-      <change afterPath="$PROJECT_DIR$/src/com/pawamamama/file_/outputstream_/FileOutputStream01.java" afterDir="false" />
++    <list default="true" id="5b9632c3-4337-41b7-bb76-9d423a223a6b" name="更改" comment="chapter19 io流学习-字节输出流">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/com/pawamamama/file_/inputstream_/FileInputStream_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pawamamama/file_/inputstream_/FileInputStream_.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -15,7 +13,7 @@
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+   <component name="EmbeddingIndexingInfo">
+-    <option name="cachedIndexableFilesCount" value="11" />
++    <option name="cachedIndexableFilesCount" value="15" />
+   </component>
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+@@ -33,61 +31,61 @@
+   </component>
+   <component name="NextEditCompletionFeaturesState">
+     <decayedCancelled>
+-      <entry key="MS100" value="0.0" />
+-      <entry key="MS500" value="2.0557607172707857E-88" />
+-      <entry key="S2" value="1.197410716817795E-22" />
+-      <entry key="S5" value="1.7033239630980465E-9" />
+-      <entry key="S10" value="4.127134554503964E-5" />
+-      <entry key="S30" value="0.03456005028899834" />
+-      <entry key="S60" value="0.18958380036716946" />
+-      <entry key="M2" value="0.5955514502885318" />
+-      <entry key="M5" value="2.983730551381592" />
+-      <entry key="M10" value="9.560747021529082" />
+-      <entry key="M15" value="17.15607911189372" />
+-      <entry key="M30" value="38.17678732566272" />
+-      <entry key="H1" value="67.56539043033342" />
+-      <entry key="H2" value="100.07210788555709" />
+-      <entry key="H4" value="127.91689877624827" />
+-      <entry key="D1" value="162.35650136093156" />
+-      <entry key="W1" value="169.72234818842603" />
++      <entry key="MS100" value="1.0026131397554743" />
++      <entry key="MS500" value="1.3063995394834342" />
++      <entry key="S2" value="1.9544627884210461" />
++      <entry key="S5" value="2.42523205593519" />
++      <entry key="S10" value="2.6753202686806357" />
++      <entry key="S30" value="2.8821207895690835" />
++      <entry key="S60" value="2.9489651667492947" />
++      <entry key="M2" value="3.10117914729761" />
++      <entry key="M5" value="4.619212456649286" />
++      <entry key="M10" value="10.063601148793618" />
++      <entry key="M15" value="17.02488344866366" />
++      <entry key="M30" value="37.520549197422646" />
++      <entry key="H1" value="67.24945160908648" />
++      <entry key="H2" value="100.58583907697496" />
++      <entry key="H4" value="129.3179468942655" />
++      <entry key="D1" value="165.01649748868522" />
++      <entry key="W1" value="172.67152723431371" />
+     </decayedCancelled>
+     <decayedSelected>
+-      <entry key="MS100" value="1.0" />
+-      <entry key="MS500" value="1.0" />
+-      <entry key="S2" value="1.0" />
+-      <entry key="S5" value="1.000000005157918" />
+-      <entry key="S10" value="1.0001016670212415" />
+-      <entry key="S30" value="1.0812163403440538" />
+-      <entry key="S60" value="1.4728448394789169" />
+-      <entry key="M2" value="2.3243316286443143" />
+-      <entry key="M5" value="5.373108994458665" />
+-      <entry key="M10" value="10.990587665570658" />
+-      <entry key="M15" value="16.601220240672692" />
+-      <entry key="M30" value="32.65992317449247" />
+-      <entry key="H1" value="55.984907365335076" />
+-      <entry key="H2" value="80.70685318278099" />
+-      <entry key="H4" value="100.69515105475126" />
+-      <entry key="D1" value="124.24834574140236" />
+-      <entry key="W1" value="129.15331770059387" />
++      <entry key="MS100" value="0.0" />
++      <entry key="MS500" value="4.954154950213177E-158" />
++      <entry key="S2" value="4.717831181683797E-40" />
++      <entry key="S5" value="1.8599315474364753E-16" />
++      <entry key="S10" value="1.3639317228021444E-8" />
++      <entry key="S30" value="0.0025832241588122393" />
++      <entry key="S60" value="0.07199158643650062" />
++      <entry key="M2" value="0.5138785206922637" />
++      <entry key="M5" value="2.9379919378503283" />
++      <entry key="M10" value="8.127058565258416" />
++      <entry key="M15" value="13.575265359774612" />
++      <entry key="M30" value="29.533799148639346" />
++      <entry key="H1" value="53.23816072787707" />
++      <entry key="H2" value="78.70212410141" />
++      <entry key="H4" value="99.436671275648" />
++      <entry key="D1" value="123.98818001010869" />
++      <entry key="W1" value="129.11464922366395" />
+     </decayedSelected>
+     <decayedShown>
+-      <entry key="MS100" value="0.0015323908162045907" />
+-      <entry key="MS500" value="0.27357342531518486" />
+-      <entry key="S2" value="0.7232167516701093" />
+-      <entry key="S5" value="0.8784304742596813" />
+-      <entry key="S10" value="0.9373806215162472" />
+-      <entry key="S30" value="1.0921751485173095" />
+-      <entry key="S60" value="1.6453964173309075" />
+-      <entry key="M2" value="2.904796425848961" />
+-      <entry key="M5" value="8.337540676358906" />
+-      <entry key="M10" value="20.528843704430578" />
+-      <entry key="M15" value="33.73347731454416" />
+-      <entry key="M30" value="70.81146866550006" />
+-      <entry key="H1" value="123.52786372821937" />
+-      <entry key="H2" value="180.76268087730637" />
+-      <entry key="H4" value="228.60192011911008" />
+-      <entry key="D1" value="286.602776756371" />
+-      <entry key="W1" value="298.8753588968745" />
++      <entry key="MS100" value="0.9752143095292274" />
++      <entry key="MS500" value="1.299584261472422" />
++      <entry key="S2" value="1.9517194695122244" />
++      <entry key="S5" value="2.423712882004127" />
++      <entry key="S10" value="2.6744407623479427" />
++      <entry key="S30" value="2.8843206108270985" />
++      <entry key="S60" value="3.0199559527723903" />
++      <entry key="M2" value="3.6116368357023094" />
++      <entry key="M5" value="7.546617406030216" />
++      <entry key="M10" value="18.174011339228638" />
++      <entry key="M15" value="30.580657356026737" />
++      <entry key="M30" value="67.03151682450965" />
++      <entry key="H1" value="120.46627604909928" />
++      <entry key="H2" value="179.27208593771775" />
++      <entry key="H4" value="228.7446143363972" />
++      <entry key="D1" value="289.0026113676281" />
++      <entry key="W1" value="301.78586954055453" />
+     </decayedShown>
+   </component>
+   <component name="ProjectColorInfo">{
+@@ -102,42 +100,42 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Downloaded.Files.Path.Enabled": "false",
+-    "JUnit.Director.m1.executor": "Run",
+-    "JUnit.Director.m2.executor": "Run",
+-    "JUnit.Director.m3.executor": "Run",
+-    "JUnit.FileCreate.create1.executor": "Run",
+-    "JUnit.FileCreate.create2.executor": "Run",
+-    "JUnit.FileCreate.create3.executor": "Run",
+-    "JUnit.FileInputStream_.readFile01.executor": "Run",
+-    "JUnit.FileInputStream_.readFile02.executor": "Run",
+-    "JUnit.FileOutputStream01.writeFile01.executor": "Run",
+-    "JUnit.GetFileInformation.info.executor": "Run",
+-    "ModuleVcsDetector.initialDetectionPerformed": "true",
+-    "Repository.Attach.Annotations": "false",
+-    "Repository.Attach.JavaDocs": "false",
+-    "Repository.Attach.Sources": "false",
+-    "RunOnceActivity.MCP Project settings loaded": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.git.unshallow": "true",
+-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+-    "codeWithMe.voiceChat.enabledByDefault": "false",
+-    "git-widget-placeholder": "main",
+-    "kotlin-language-version-configured": "true",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "project.structure.last.edited": "项目",
+-    "project.structure.proportion": "0.0",
+-    "project.structure.side.proportion": "0.0",
+-    "settings.editor.selected.configurable": "cn.yiiguxing.plugin.translate",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
++    &quot;JUnit.Director.m1.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.Director.m2.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.Director.m3.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.FileCreate.create1.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.FileCreate.create2.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.FileCreate.create3.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.FileInputStream_.readFile01.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.FileInputStream_.readFile02.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.FileOutputStream01.writeFile01.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.GetFileInformation.info.executor&quot;: &quot;Run&quot;,
++    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
++    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
++    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
++    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;cn.yiiguxing.plugin.translate&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RunManager" selected="JUnit.FileOutputStream01.writeFile01">
+     <configuration name="Director.m2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="chapter19" />
+@@ -246,7 +244,8 @@
+       <updated>1784467311474</updated>
+       <workItem from="1784467313717" duration="5717000" />
+       <workItem from="1784607667681" duration="2941000" />
+-      <workItem from="1784635518743" duration="5104000" />
++      <workItem from="1784635518743" duration="5184000" />
++      <workItem from="1785313202759" duration="336000" />
+     </task>
+     <task id="LOCAL-00001" summary="chapter19 io流学习">
+       <option name="closed" value="true" />
+@@ -296,7 +295,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1784638511421</updated>
+     </task>
+-    <option name="localTasksCounter" value="7" />
++    <task id="LOCAL-00007" summary="chapter19 io流学习-字节输出流">
++      <option name="closed" value="true" />
++      <created>1784640674567</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1784640674567</updated>
++    </task>
++    <option name="localTasksCounter" value="8" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -309,7 +316,8 @@
+     <MESSAGE value="chapter19 io流学习-file方法学习和目录与多级目录创建" />
+     <MESSAGE value="chapter19 io流学习-版本管理" />
+     <MESSAGE value="chapter19 io流学习-字节输入流完整使用" />
+-    <option name="LAST_COMMIT_MESSAGE" value="chapter19 io流学习-字节输入流完整使用" />
++    <MESSAGE value="chapter19 io流学习-字节输出流" />
++    <option name="LAST_COMMIT_MESSAGE" value="chapter19 io流学习-字节输出流" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
