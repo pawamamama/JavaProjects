@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b9632c3-4337-41b7-bb76-9d423a223a6b" name="更改" comment="chapter19 io流学习-字符包装流-BufferedReader使用">
-      <change afterPath="$PROJECT_DIR$/src/com/pawamamama/reader_/BufferadReader_.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/pawamamama/writer_/BufferadCopy_.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/pawamamama/writer_/BufferedWriter_.java" afterDir="false" />
+    <list default="true" id="5b9632c3-4337-41b7-bb76-9d423a223a6b" name="更改" comment="chapter19 io流学习-字符包装流-文件管理">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,61 +32,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.4921089216873435E-9" />
-      <entry key="MS500" value="0.017169597149638744" />
-      <entry key="S2" value="0.36198454309488975" />
-      <entry key="S5" value="0.6660027803299775" />
-      <entry key="S10" value="0.8165111122630857" />
-      <entry key="S30" value="1.146647661289116" />
-      <entry key="S60" value="2.1259785274081153" />
-      <entry key="M2" value="4.324716021397695" />
-      <entry key="M5" value="10.291181619872885" />
-      <entry key="M10" value="17.653123860981687" />
-      <entry key="M15" value="24.333864343535012" />
-      <entry key="M30" value="43.332214276437334" />
-      <entry key="H1" value="77.61017110345644" />
-      <entry key="H2" value="139.1847892656822" />
-      <entry key="H4" value="228.330931317325" />
-      <entry key="D1" value="408.0137234208031" />
-      <entry key="W1" value="458.71591130501804" />
+      <entry key="MS100" value="1.0002391162835906" />
+      <entry key="MS500" value="1.1886782776555767" />
+      <entry key="S2" value="1.6805421257264408" />
+      <entry key="S5" value="2.1991539728342033" />
+      <entry key="S10" value="2.8959575845546093" />
+      <entry key="S30" value="4.148276011890548" />
+      <entry key="S60" value="5.206371963357784" />
+      <entry key="M2" value="7.291398889384943" />
+      <entry key="M5" value="13.25254912831296" />
+      <entry key="M10" value="20.8620786968191" />
+      <entry key="M15" value="27.67593256433609" />
+      <entry key="M30" value="46.84705116455376" />
+      <entry key="H1" value="81.27692778172684" />
+      <entry key="H2" value="142.98822260494333" />
+      <entry key="H4" value="232.34898779821216" />
+      <entry key="D1" value="412.72108972119656" />
+      <entry key="W1" value="463.66890472038097" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000000000001952" />
-      <entry key="S5" value="1.0000082638183616" />
-      <entry key="S10" value="1.0030572133631912" />
-      <entry key="S30" value="1.2413787982175628" />
-      <entry key="S60" value="1.9036653275816922" />
-      <entry key="M2" value="3.026317996405796" />
-      <entry key="M5" value="5.349357246943743" />
-      <entry key="M10" value="8.705396673560479" />
-      <entry key="M15" value="12.433776785668968" />
-      <entry key="M30" value="23.740961263240518" />
-      <entry key="H1" value="43.658022172292505" />
-      <entry key="H2" value="79.5608192422902" />
-      <entry key="H4" value="134.13237698038415" />
-      <entry key="D1" value="248.33656954806594" />
-      <entry key="W1" value="281.00605796886555" />
+      <entry key="MS100" value="1.4934588891135982E-269" />
+      <entry key="MS500" value="1.7172702822815767E-54" />
+      <entry key="S2" value="3.620009111178741E-14" />
+      <entry key="S5" value="4.202303881360769E-6" />
+      <entry key="S10" value="0.002056210810723359" />
+      <entry key="S30" value="0.15769513718367306" />
+      <entry key="S60" value="0.6784964641137324" />
+      <entry key="M2" value="1.8067291635645217" />
+      <entry key="M5" value="4.3520412208192125" />
+      <entry key="M10" value="7.852071833385821" />
+      <entry key="M15" value="11.60736209132346" />
+      <entry key="M30" value="22.93842169045896" />
+      <entry key="H1" value="42.91377042852551" />
+      <entry key="H2" value="78.87975529984836" />
+      <entry key="H4" value="133.55703682454026" />
+      <entry key="D1" value="248.1587178482171" />
+      <entry key="W1" value="280.97729933031957" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.35111121894370895" />
-      <entry key="MS500" value="0.8173336743277936" />
-      <entry key="S2" value="1.229693516569521" />
-      <entry key="S5" value="1.5808603611331693" />
-      <entry key="S10" value="1.7685392473778656" />
-      <entry key="S30" value="2.361693436261662" />
-      <entry key="S60" value="4.003024279907534" />
-      <entry key="M2" value="7.32430189182458" />
-      <entry key="M5" value="15.616889154621779" />
-      <entry key="M10" value="26.3374706197" />
-      <entry key="M15" value="36.746443780257785" />
-      <entry key="M30" value="67.04978563060932" />
-      <entry key="H1" value="121.2443169560606" />
-      <entry key="H2" value="218.72391130025946" />
-      <entry key="H4" value="362.44589846080214" />
-      <entry key="D1" value="656.3452660949788" />
-      <entry key="W1" value="739.7211668358411" />
+      <entry key="MS100" value="0.9728875250485268" />
+      <entry key="MS500" value="1.1821050873142689" />
+      <entry key="S2" value="1.6782182635531315" />
+      <entry key="S5" value="2.1979508245034403" />
+      <entry key="S10" value="2.8971004086706915" />
+      <entry key="S30" value="4.302234968203732" />
+      <entry key="S60" value="5.87515941385409" />
+      <entry key="M2" value="9.082050429386257" />
+      <entry key="M5" value="17.58530041850596" />
+      <entry key="M10" value="28.695138929885367" />
+      <entry key="M15" value="39.263489413870275" />
+      <entry key="M30" value="69.76286518756592" />
+      <entry key="H1" value="124.16722469186158" />
+      <entry key="H2" value="221.84646431614826" />
+      <entry key="H4" value="365.8886884043225" />
+      <entry key="D1" value="660.8747841191517" />
+      <entry key="W1" value="744.6454016695676" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -140,6 +137,7 @@
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "cn.yiiguxing.plugin.translate",
     "vue.rearranger.settings.migration": "true",
+    "应用程序.BufferadCopy_.executor": "Run",
     "应用程序.BufferadReader_.executor": "Debug",
     "应用程序.BufferedWriter_.executor": "Run",
     "应用程序.FileCopy.executor": "Run",
@@ -252,7 +250,7 @@
       <workItem from="1785996659032" duration="658000" />
       <workItem from="1785999884908" duration="401000" />
       <workItem from="1786000396070" duration="7281000" />
-      <workItem from="1786086320125" duration="2180000" />
+      <workItem from="1786086320125" duration="5841000" />
     </task>
     <task id="LOCAL-00001" summary="chapter19 io流学习">
       <option name="closed" value="true" />
@@ -358,7 +356,39 @@
       <option name="project" value="LOCAL" />
       <updated>1786008004906</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="chapter19 io流学习-字符包装流-BufferedReader使用">
+      <option name="closed" value="true" />
+      <created>1786088725280</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1786088725280</updated>
+    </task>
+    <task id="LOCAL-00015" summary="chapter19 io流学习-字符包装流-BufferedWriter使用">
+      <option name="closed" value="true" />
+      <created>1786088736447</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1786088736447</updated>
+    </task>
+    <task id="LOCAL-00016" summary="chapter19 io流学习-字符包装流-文件拷贝">
+      <option name="closed" value="true" />
+      <created>1786088750984</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1786088750984</updated>
+    </task>
+    <task id="LOCAL-00017" summary="chapter19 io流学习-字符包装流-文件管理">
+      <option name="closed" value="true" />
+      <created>1786088763329</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1786088763329</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +407,11 @@
     <MESSAGE value="chapter19 io流学习-字符输出流" />
     <MESSAGE value="chapter19 io流学习-文件管理" />
     <MESSAGE value="chapter19 io流学习-文件包装流/处理流模拟" />
-    <option name="LAST_COMMIT_MESSAGE" value="chapter19 io流学习-文件包装流/处理流模拟" />
+    <MESSAGE value="chapter19 io流学习-字符包装流-BufferedReader使用" />
+    <MESSAGE value="chapter19 io流学习-字符包装流-BufferedWriter使用" />
+    <MESSAGE value="chapter19 io流学习-字符包装流-文件拷贝" />
+    <MESSAGE value="chapter19 io流学习-字符包装流-文件管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="chapter19 io流学习-字符包装流-文件管理" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
