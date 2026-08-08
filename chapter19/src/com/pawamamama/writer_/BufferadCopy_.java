@@ -6,6 +6,8 @@ import java.io.*;
  * Class: BufferadCopy_
  *
  * <pre>包装流拷贝
+ * 1.BufferadReader 和  BufferedWriter 是字符操作
+ * 2.不要操作二进制文件，可能造成文件损坏
  * </pre>
  *
  * @author pawamamama
