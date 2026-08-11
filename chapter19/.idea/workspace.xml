@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b9632c3-4337-41b7-bb76-9d423a223a6b" name="更改" comment="chapter19 io流学习-转换流-编码问题">
-      <change afterPath="$PROJECT_DIR$/src/com/pawamamama/transformation/outputStreamWriter_.java" afterDir="false" />
+    <list default="true" id="5b9632c3-4337-41b7-bb76-9d423a223a6b" name="更改" comment="chapter19 io流学习-版本管理">
+      <change afterPath="$PROJECT_DIR$/src/com/pawamamama/print/11.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/pawamamama/print/PrintStream_.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/pawamamama/print/PrintWriter_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,61 +35,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="5.676750109626882E-13" />
-      <entry key="MS500" value="0.0036745538917794173" />
-      <entry key="S2" value="0.5434758314428134" />
-      <entry key="S5" value="2.4885269724777777" />
-      <entry key="S10" value="5.135615373892945" />
-      <entry key="S30" value="10.336678195054299" />
-      <entry key="S60" value="14.01023823999508" />
-      <entry key="M2" value="18.541468163375203" />
-      <entry key="M5" value="27.231016525041134" />
-      <entry key="M10" value="35.787361527332884" />
-      <entry key="M15" value="41.85451512886313" />
-      <entry key="M30" value="56.30771204976812" />
-      <entry key="H1" value="82.76511832233213" />
-      <entry key="H2" value="139.38462839239148" />
-      <entry key="H4" value="247.55058619163705" />
-      <entry key="D1" value="569.3279500585991" />
-      <entry key="W1" value="684.7322792198826" />
+      <entry key="MS100" value="1.6720494259241046E-11" />
+      <entry key="MS500" value="0.012167837467471115" />
+      <entry key="S2" value="0.5585520252294798" />
+      <entry key="S5" value="1.2025074015053974" />
+      <entry key="S10" value="1.6728741633439104" />
+      <entry key="S30" value="4.439248912383823" />
+      <entry key="S60" value="7.887096545740059" />
+      <entry key="M2" value="11.86709445831564" />
+      <entry key="M5" value="19.315738329818487" />
+      <entry key="M10" value="28.35221290285879" />
+      <entry key="M15" value="36.81156289362199" />
+      <entry key="M30" value="58.71851502711482" />
+      <entry key="H1" value="92.85130623711929" />
+      <entry key="H2" value="153.97762077753114" />
+      <entry key="H4" value="265.34066293982556" />
+      <entry key="D1" value="604.3540173553133" />
+      <entry key="W1" value="728.8393559131652" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0000043516682275" />
-      <entry key="MS500" value="1.0846703749755136" />
-      <entry key="S2" value="1.5555225304224054" />
-      <entry key="S5" value="2.0049653704309485" />
-      <entry key="S10" value="2.5026568015198487" />
-      <entry key="S30" value="3.361155022633954" />
-      <entry key="S60" value="3.8994684465258858" />
-      <entry key="M2" value="4.732924342378262" />
-      <entry key="M5" value="7.7202826052264655" />
-      <entry key="M10" value="11.784159940032067" />
-      <entry key="M15" value="15.373223513295631" />
-      <entry key="M30" value="25.406189595648147" />
-      <entry key="H1" value="44.844618690494904" />
-      <entry key="H2" value="82.42346761602603" />
-      <entry key="H4" value="149.17011422341733" />
-      <entry key="D1" value="347.3019138323901" />
-      <entry key="W1" value="419.10812311666956" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000002203041487" />
+      <entry key="S2" value="1.0216670639441419" />
+      <entry key="S5" value="1.2263087005976012" />
+      <entry key="S10" value="1.6904107995228723" />
+      <entry key="S30" value="4.088111245460316" />
+      <entry key="S60" value="6.361333763832224" />
+      <entry key="M2" value="8.603493909108547" />
+      <entry key="M5" value="12.22586816940399" />
+      <entry key="M10" value="16.191949526250227" />
+      <entry key="M15" value="19.809757697639505" />
+      <entry key="M30" value="30.408749191385326" />
+      <entry key="H1" value="50.69354939007299" />
+      <entry key="H2" value="89.1604636923091" />
+      <entry key="H4" value="157.34755506221623" />
+      <entry key="D1" value="365.63965062772223" />
+      <entry key="W1" value="442.9541887743401" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.0067541992156076435" />
-      <entry key="MS500" value="0.389867843334291" />
-      <entry key="S2" value="1.6522379820014965" />
-      <entry key="S5" value="4.067490251259853" />
-      <entry key="S10" value="7.184599769560497" />
-      <entry key="S30" value="13.367002426648789" />
-      <entry key="S60" value="17.69708653351122" />
-      <entry key="M2" value="23.147708548871996" />
-      <entry key="M5" value="34.88068116820346" />
-      <entry key="M10" value="47.5227339635751" />
-      <entry key="M15" value="57.187751671085564" />
-      <entry key="M30" value="81.68476757248324" />
-      <entry key="H1" value="127.58705527092928" />
-      <entry key="H2" value="221.78800290241014" />
-      <entry key="H4" value="396.70235913314275" />
-      <entry key="D1" value="916.6228210790377" />
-      <entry key="W1" value="1103.839195865044" />
+      <entry key="MS100" value="3.9274184817637755E-11" />
+      <entry key="MS500" value="0.01876814157222011" />
+      <entry key="S2" value="0.8490950110089366" />
+      <entry key="S5" value="1.9580293052849485" />
+      <entry key="S10" value="3.0241811490362047" />
+      <entry key="S30" value="8.273915652285968" />
+      <entry key="S60" value="14.052372416861347" />
+      <entry key="M2" value="20.334958973500594" />
+      <entry key="M5" value="31.46162482136188" />
+      <entry key="M10" value="44.490730419822626" />
+      <entry key="M15" value="56.577619609794574" />
+      <entry key="M30" value="89.09429184800022" />
+      <entry key="H1" value="143.51893959396816" />
+      <entry key="H2" value="243.11604604365337" />
+      <entry key="H4" value="422.66875703155483" />
+      <entry key="D1" value="969.9862308377263" />
+      <entry key="W1" value="1171.792265950137" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -148,8 +151,10 @@
     "应用程序.InputAndOutput.executor": "Run",
     "应用程序.ObjectIntputStream_.executor": "Run",
     "应用程序.ObjectOutStream_.executor": "Run",
+    "应用程序.PrintStream_.executor": "Run",
     "应用程序.Test_.executor": "Run",
-    "应用程序.inputStreamReader_.executor": "Run"
+    "应用程序.inputStreamReader_.executor": "Run",
+    "应用程序.outputStreamWriter_.executor": "Run"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -162,7 +167,7 @@
       <recent name="D:\java_learning\java_code\chapter19\src\com\pawamamama\file_\buffered_\copy" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.outputStreamWriter_">
+  <component name="RunManager" selected="应用程序.PrintWriter_">
     <configuration name="InputAndOutput" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.pawamamama.standard_.InputAndOutput" />
       <module name="chapter19" />
@@ -176,12 +181,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ObjectIntputStream_" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.pawamamama.ObjectStream_.ObjectIntputStream_" />
+    <configuration name="PrintStream_" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.pawamamama.print.PrintStream_" />
       <module name="chapter19" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.pawamamama.ObjectStream_.*" />
+          <option name="PATTERN" value="com.pawamamama.print.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -189,12 +194,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ObjectOutStream_" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.pawamamama.ObjectStream_.ObjectOutStream_" />
+    <configuration name="PrintWriter_" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.pawamamama.print.PrintWriter_" />
       <module name="chapter19" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.pawamamama.ObjectStream_.*" />
+          <option name="PATTERN" value="com.pawamamama.print.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -230,11 +235,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.PrintWriter_" />
+        <item itemvalue="应用程序.PrintStream_" />
         <item itemvalue="应用程序.outputStreamWriter_" />
         <item itemvalue="应用程序.inputStreamReader_" />
         <item itemvalue="应用程序.InputAndOutput" />
-        <item itemvalue="应用程序.ObjectIntputStream_" />
-        <item itemvalue="应用程序.ObjectOutStream_" />
       </list>
     </recent_temporary>
   </component>
@@ -264,7 +269,7 @@
       <workItem from="1786086320125" duration="5841000" />
       <workItem from="1786181717809" duration="9944000" />
       <workItem from="1786270334328" duration="5102000" />
-      <workItem from="1786434885805" duration="3087000" />
+      <workItem from="1786434885805" duration="5025000" />
     </task>
     <task id="LOCAL-00001" summary="chapter19 io流学习">
       <option name="closed" value="true" />
@@ -490,7 +495,23 @@
       <option name="project" value="LOCAL" />
       <updated>1786438137511</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="chapter19 io流学习-转换流-outputStreamWriter使用">
+      <option name="closed" value="true" />
+      <created>1786438611657</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1786438611657</updated>
+    </task>
+    <task id="LOCAL-00030" summary="chapter19 io流学习-版本管理">
+      <option name="closed" value="true" />
+      <created>1786438628433</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1786438628433</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,7 +526,6 @@
     <MESSAGE value="chapter19 io流学习-字节输出流" />
     <MESSAGE value="chapter19 io流学习-文件拷贝" />
     <MESSAGE value="chapter19 io流学习-字符输入流" />
-    <MESSAGE value="chapter19 io流学习-版本管理" />
     <MESSAGE value="chapter19 io流学习-字符输出流" />
     <MESSAGE value="chapter19 io流学习-文件包装流/处理流模拟" />
     <MESSAGE value="chapter19 io流学习-字符包装流-BufferedReader使用" />
@@ -520,7 +540,9 @@
     <MESSAGE value="chapter19 io流学习-标准输入流System.in和标准输出流System.out的使用" />
     <MESSAGE value="chapter19 io流学习-转换流-InputStreamReader 的使用" />
     <MESSAGE value="chapter19 io流学习-转换流-编码问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="chapter19 io流学习-转换流-编码问题" />
+    <MESSAGE value="chapter19 io流学习-转换流-outputStreamWriter使用" />
+    <MESSAGE value="chapter19 io流学习-版本管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="chapter19 io流学习-版本管理" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
