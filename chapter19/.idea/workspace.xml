@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b9632c3-4337-41b7-bb76-9d423a223a6b" name="更改" comment="chapter19 io流学习-版本管理">
-      <change afterPath="$PROJECT_DIR$/src/com/pawamamama/homework/Homework03.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/pawamamama/homework/dog.properties" afterDir="false" />
+    <list default="true" id="5b9632c3-4337-41b7-bb76-9d423a223a6b" name="更改" comment="chapter19 io流学习-作业3-使用properties进行对象的序列化和反序列化（泛型）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,61 +32,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.258321386634823E-72" />
-      <entry key="MS500" value="5.97092933199734E-15" />
-      <entry key="S2" value="4.980390282906323E-4" />
-      <entry key="S5" value="0.08704423951619393" />
-      <entry key="S10" value="0.5053264138302862" />
-      <entry key="S30" value="2.0479770090167997" />
-      <entry key="S60" value="4.509297180933017" />
-      <entry key="M2" value="9.735332263305832" />
-      <entry key="M5" value="24.422563243951686" />
-      <entry key="M10" value="42.50025859023875" />
-      <entry key="M15" value="55.071077325980355" />
-      <entry key="M30" value="76.6619609615459" />
-      <entry key="H1" value="103.15969583183836" />
-      <entry key="H2" value="149.77721363396003" />
-      <entry key="H4" value="239.66228639181617" />
-      <entry key="D1" value="724.4440065559243" />
-      <entry key="W1" value="995.5505819594175" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000057583080013" />
+      <entry key="S2" value="1.0593941106038103" />
+      <entry key="S5" value="1.784586077220185" />
+      <entry key="S10" value="3.7949430868719087" />
+      <entry key="S30" value="9.135726769808029" />
+      <entry key="S60" value="12.20568349603274" />
+      <entry key="M2" value="16.035438761144963" />
+      <entry key="M5" value="28.619055407011487" />
+      <entry key="M10" value="47.179090767126176" />
+      <entry key="M15" value="60.92999921979112" />
+      <entry key="M30" value="85.32875991947915" />
+      <entry key="H1" value="114.13442835584392" />
+      <entry key="H2" value="162.10297957436046" />
+      <entry key="H4" value="252.71677081413515" />
+      <entry key="D1" value="738.9592463393502" />
+      <entry key="W1" value="1011.2590193194454" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000094112804" />
-      <entry key="S2" value="1.0114607250610699" />
-      <entry key="S5" value="1.23391353158559" />
-      <entry key="S10" value="1.6739549042290385" />
-      <entry key="S30" value="2.479573091963423" />
-      <entry key="S60" value="3.186800429626283" />
-      <entry key="M2" value="5.275012949306434" />
-      <entry key="M5" value="12.77407746739356" />
-      <entry key="M10" value="22.739698743053616" />
-      <entry key="M15" value="29.82713987715768" />
-      <entry key="M30" value="41.897355526969825" />
-      <entry key="H1" value="55.633950817154904" />
-      <entry key="H2" value="79.19738634470623" />
-      <entry key="H4" value="127.44929193925222" />
-      <entry key="D1" value="410.69732980481984" />
-      <entry key="W1" value="573.669835827815" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="1.215289041094479E-121" />
+      <entry key="S2" value="5.904320151833448E-31" />
+      <entry key="S5" value="8.105042765872724E-13" />
+      <entry key="S10" value="9.348740595236962E-7" />
+      <entry key="S30" value="0.016478791489861193" />
+      <entry key="S60" value="0.26543913331843483" />
+      <entry key="M2" value="1.5216618049153503" />
+      <entry key="M5" value="7.713021441751306" />
+      <entry key="M10" value="17.72725143779445" />
+      <entry key="M15" value="25.36238199021739" />
+      <entry key="M30" value="38.90201859664731" />
+      <entry key="H1" value="53.92886855163693" />
+      <entry key="H2" value="78.25651850761147" />
+      <entry key="H4" value="126.88390158623955" />
+      <entry key="D1" value="410.85587639924864" />
+      <entry key="W1" value="574.5018715727289" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.010598471308184932" />
-      <entry key="MS500" value="0.4027621487721536" />
-      <entry key="S2" value="0.8053136746121048" />
-      <entry key="S5" value="1.1911239302622358" />
-      <entry key="S10" value="2.055837949350824" />
-      <entry key="S30" value="4.440646107342125" />
-      <entry key="S60" value="7.629200598677169" />
-      <entry key="M2" value="14.946494036900322" />
-      <entry key="M5" value="37.126383612920975" />
-      <entry key="M10" value="65.1713864828506" />
-      <entry key="M15" value="84.83532806672478" />
-      <entry key="M30" value="118.5126000628527" />
-      <entry key="H1" value="158.76172018587744" />
-      <entry key="H2" value="228.95171606661353" />
-      <entry key="H4" value="367.09353317786207" />
-      <entry key="D1" value="1135.132372725162" />
-      <entry key="W1" value="1569.2186638362382" />
+      <entry key="MS100" value="0.9726549474122855" />
+      <entry key="MS500" value="0.9944758951385995" />
+      <entry key="S2" value="1.057919464354176" />
+      <entry key="S5" value="1.783483082914624" />
+      <entry key="S10" value="3.7936996782480117" />
+      <entry key="S30" value="9.150854946109211" />
+      <entry key="S60" value="12.466353881827292" />
+      <entry key="M2" value="17.54112395154564" />
+      <entry key="M5" value="36.29216381841883" />
+      <entry key="M10" value="64.85469700819009" />
+      <entry key="M15" value="86.24029801185695" />
+      <entry key="M30" value="124.18821225253531" />
+      <entry key="H1" value="168.0327862753679" />
+      <entry key="H2" value="240.33711106716677" />
+      <entry key="H4" value="379.5828180804921" />
+      <entry key="D1" value="1149.806172490179" />
+      <entry key="W1" value="1585.75913674703" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -277,7 +275,7 @@
       <workItem from="1786181717809" duration="9944000" />
       <workItem from="1786270334328" duration="5102000" />
       <workItem from="1786434885805" duration="7776000" />
-      <workItem from="1786601461678" duration="9387000" />
+      <workItem from="1786601461678" duration="10363000" />
     </task>
     <task id="LOCAL-00001" summary="chapter19 io流学习">
       <option name="closed" value="true" />
@@ -567,14 +565,21 @@
       <option name="project" value="LOCAL" />
       <updated>1786608886247</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="chapter19 io流学习-作业3-使用properties进行对象的序列化和反序列化（泛型）">
+      <option name="closed" value="true" />
+      <created>1786620854080</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1786620854080</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="chapter19 io流学习-字节输入流完整使用" />
     <MESSAGE value="chapter19 io流学习-字节输出流" />
     <MESSAGE value="chapter19 io流学习-文件拷贝" />
     <MESSAGE value="chapter19 io流学习-字符输入流" />
@@ -599,7 +604,8 @@
     <MESSAGE value="chapter19 io流学习-作业1-创建文件夹与写入内容" />
     <MESSAGE value="chapter19 io流学习-作业2-使用字符处理流 BufferedReader 按行读取文件内容 + 转换流解决乱码问题" />
     <MESSAGE value="chapter19 io流学习-版本管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="chapter19 io流学习-版本管理" />
+    <MESSAGE value="chapter19 io流学习-作业3-使用properties进行对象的序列化和反序列化（泛型）" />
+    <option name="LAST_COMMIT_MESSAGE" value="chapter19 io流学习-作业3-使用properties进行对象的序列化和反序列化（泛型）" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
