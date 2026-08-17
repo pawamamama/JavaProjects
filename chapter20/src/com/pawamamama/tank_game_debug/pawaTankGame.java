@@ -1,6 +1,8 @@
 package com.pawamamama.tank_game_debug;
 
 import javax.swing.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 /**
  * Class: pawaTankGame 游戏窗口区域
@@ -29,5 +31,15 @@ public class pawaTankGame extends JFrame {
         this.addKeyListener(mp);//窗口监听键盘输入mp实现了key
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);//默认显示
+
+        //在JFrame中增加相应关闭窗口的处理
+        this.addWindowListener(new WindowAdapter() {
+
+            @Override
+            public void windowClosing(WindowEvent e) {
+               Recorder.keepRecording();
+                System.exit(0);
+            }
+        });
     }
 }

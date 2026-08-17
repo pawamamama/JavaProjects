@@ -65,10 +65,25 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
         image3 = Toolkit.getDefaultToolkit().getImage(Panel.class.getResource("/bomb_3.gif"));
     }
 
+    //添加显示我方击毁坦克的信息
+    public void showinfo(Graphics g) {
+        //画出玩家的总成绩
+        g.setColor(Color.black);
+        Font font = new Font("宋体", Font.BOLD, 25);
+        g.setFont(font);
+
+        g.drawString("累计击毁敌方坦克", 1020, 30);
+        this.drawTank(1020, 60, g, 0, 0);//画出一个敌方坦克
+        g.setColor(Color.black);
+        g.drawString(Recorder.getAllEnemyTankNum() + "", 1080, 100);
+    }
+
     @Override
     public void paint(Graphics g) {
         super.paint(g);
         //绘制游戏区域
+        //绘制玩家信息页面
+        showinfo(g);
         //添加颜色
         g.setColor(Color.DARK_GRAY);
         g.fillRect(0, 0, 1000, 750);
@@ -347,13 +362,15 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
                 for (int j = 0; j < enemyTanks.size(); j++) {
                     //取出坦克,依次对比我方子弹是否击中敌方坦克
                     EnemyTank enemyTank = enemyTanks.get(j);
-                    hitTank(shot, enemyTank);
+                    //hitTank(shot, enemyTank);
+                    newHitTank(shot,enemyTank,enemyTank);
                 }
             } else {
                 shots.remove(shot);
             }
         }
     }
+
     public void hitTank(Shot shot, Tank tank) {
         //判断是否击中坦克
         switch (tank.getDirect()) {
@@ -371,6 +388,10 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
                     tank.isLive = false;
                     //当我们的子弹击中敌人坦克后，将敌人坦克从Vector中去掉
                     enemyTanks.remove(tank);
+                    //当我方击毁一个敌人坦克时，就allEnemyTankNum++
+                    if (tank instanceof EnemyTank){
+                        Recorder.addallEnemyTankNum();
+                    }
                     //创建炸弹对象加入到bombs集合中
                     Bomb bomb = new Bomb(tank.getX(), tank.getY());
                     bombs.add(bomb);
@@ -389,6 +410,10 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
                     tank.isLive = false;
                     //当我们的子弹击中敌人坦克后，将敌人坦克从Vector中去掉
                     enemyTanks.remove(tank);
+                    //当我方击毁一个敌人坦克时，就allEnemyTankNum++
+                    if (tank instanceof EnemyTank){
+                        Recorder.addallEnemyTankNum();
+                    }
                     //创建炸弹对象加入到bombs集合中
                     Bomb bomb = new Bomb(tank.getX(), tank.getY());
                     bombs.add(bomb);
@@ -456,7 +481,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
         if (isPass == 0) {
             return;
         }
-        if (isPass ==1) {//打到EnemyTank,如果传入的是敌人那子弹肯定是玩家子弹
+        if (isPass == 1) {//打到EnemyTank,如果传入的是敌人那子弹肯定是玩家子弹
             EnemyTank enemyTank1 = (EnemyTank) tank;
             //把当前子弹设置为已死亡
             shot.isLive = false;
@@ -465,6 +490,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
             tank.isLive = false;
             //当我们的子弹击中敌人坦克后，将敌人坦克从Vector中去掉
             enemyTanks.remove(enemyTank1);
+            Recorder.addallEnemyTankNum();
             //创建炸弹对象加入到bombs集合中
             Bomb bomb = new Bomb(enemyTank1.getX(), enemyTank1.getY());
             bombs.add(bomb);
