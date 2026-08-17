@@ -23,6 +23,9 @@ public class EnemyTank extends Tank implements Runnable {
     int sleep = 100;
     //在敌人坦克类，使用Vector 保持多个Shot
     Vector<Shot> shots = new Vector();
+    //增加成员， EnemyTank 可以得到所有坦克的Vector
+    //1.Vector<EnemyTank> enemyTanks在panel类
+    Vector<EnemyTank> enemyTanks = new Vector<>();
     //敌人坦克发射子弹最大值
     int bulletBigSize = 5;
 
@@ -31,6 +34,215 @@ public class EnemyTank extends Tank implements Runnable {
 
         super(x, y);
         setSpeed(3);
+    }
+
+    //myPanel 对象的EnemyTanks 设置过来
+    public void setEnemyTanks(Vector<EnemyTank> enemyTanks) {
+        this.enemyTanks = enemyTanks;
+    }
+
+    //当前坦克是否和其他坦克发生了重叠现象或者碰撞
+    public boolean isTouchEnemyTank() {
+        //判断当前坦克方向
+        switch (this.getDirect()) {
+            case 0://上
+                //让当前this的和其他敌人坦克比较
+                for (int i = 0; i < enemyTanks.size(); i++) {
+                    //从vector中一个敌人坦克
+                    EnemyTank enemyTank = enemyTanks.get(i);
+                    //不要和自己比较
+                    if (enemyTank != this) {
+                        //如果敌人坦克是上下
+                        //范围是[x,x+40][y,y+60]
+                        if (enemyTank.getDirect() == 0 || enemyTank.getDirect() == 2) {
+                            //1.this坦克左上角坐标[x][y]
+                            if (this.getX() >= enemyTank.getX() &&
+                                    this.getX() <= enemyTank.getX() + 40 &&
+                                    this.getY() >= enemyTank.getY() &&
+                                    this.getY() <= enemyTank.getY() + 60) {
+                                return true;
+                            }
+                            //2. this坦克右上角坐标[x+40][y]
+                            if (this.getX() + 40 >= enemyTank.getX() &&
+                                    this.getX() + 40 <= enemyTank.getX() + 40 &&
+                                    this.getY() >= enemyTank.getY() &&
+                                    this.getY() <= enemyTank.getY() + 60) {
+                                return true;
+                            }
+
+
+                        }
+                        //如果敌人坦克是左右
+                        //范围是[x,x+60][y,y+40]
+                        if (enemyTank.getDirect() == 1 || enemyTank.getDirect() == 3) {
+                            //1.this坦克左上坐标[x][y]
+                            if (this.getX() >= enemyTank.getX() &&
+                                    this.getX() <= enemyTank.getX() + 60 &&
+                                    this.getY() >= enemyTank.getY() &&
+                                    this.getY() <= enemyTank.getY() + 40) {
+                                return true;
+                            }
+                            //2. this坦克右上角坐标[x+40][y]
+                            if (this.getX() + 40 >= enemyTank.getX() &&
+                                    this.getX() + 40 <= enemyTank.getX() + 60 &&
+                                    this.getY() >= enemyTank.getY() &&
+                                    this.getY() <= enemyTank.getY() + 40) {
+                                return true;
+                            }
+                        }
+                    }
+
+                }
+                break;
+            case 1://右
+                //让当前this的和其他敌人坦克比较
+                for (int i = 0; i < enemyTanks.size(); i++) {
+                    //从vector中一个敌人坦克
+                    EnemyTank enemyTank = enemyTanks.get(i);
+                    //不要和自己比较
+                    if (enemyTank != this) {
+                        //如果敌人坦克是上下
+                        //范围是[x,x+40][y,y+60]
+                        if (enemyTank.getDirect() == 0 || enemyTank.getDirect() == 2) {
+                            //1.this坦克右上角坐标[x+60][y]
+                            if (this.getX() + 60 >= enemyTank.getX() &&
+                                    this.getX() + 60 <= enemyTank.getX() + 40 &&
+                                    this.getY() >= enemyTank.getY() &&
+                                    this.getY() <= enemyTank.getY() + 60) {
+                                return true;
+                            }
+                            //2. this坦克右下坐标[x+60][y+40]
+                            if (this.getX() + 60 >= enemyTank.getX() &&
+                                    this.getX() + 60 <= enemyTank.getX() + 40 &&
+                                    this.getY() + 40 >= enemyTank.getY() &&
+                                    this.getY() + 40 <= enemyTank.getY() + 60) {
+                                return true;
+                            }
+
+
+                        }
+                        //如果敌人坦克是左右
+                        //范围是[x,x+60][y,y+40]
+                        if (enemyTank.getDirect() == 1 || enemyTank.getDirect() == 3) {
+                            //1.this坦克右上角坐标[x+60][y]
+                            if (this.getX() + 60 >= enemyTank.getX() &&
+                                    this.getX() + 60 <= enemyTank.getX() + 60 &&
+                                    this.getY() >= enemyTank.getY() &&
+                                    this.getY() <= enemyTank.getY() + 40) {
+                                return true;
+                            }
+                            //2. this坦克右下角坐标[x+60][y+40]
+                            if (this.getX() + 60 >= enemyTank.getX() &&
+                                    this.getX() + 60 <= enemyTank.getX() + 60 &&
+                                    this.getY() + 40 >= enemyTank.getY() &&
+                                    this.getY() + 40 <= enemyTank.getY() + 40) {
+                                return true;
+                            }
+                        }
+                    }
+
+                }
+                break;
+            case 2://下
+                //让当前this的和其他敌人坦克比较
+                for (int i = 0; i < enemyTanks.size(); i++) {
+                    //从vector中一个敌人坦克
+                    EnemyTank enemyTank = enemyTanks.get(i);
+                    //不要和自己比较
+                    if (enemyTank != this) {
+                        //如果敌人坦克是上下
+                        //范围是[x,x+40][y,y+60]
+                        if (enemyTank.getDirect() == 0 || enemyTank.getDirect() == 2) {
+                            //1.this坦克左下角坐标[x][y+60]
+                            if (this.getX() >= enemyTank.getX() &&
+                                    this.getX() <= enemyTank.getX() + 40 &&
+                                    this.getY() + 60 >= enemyTank.getY() &&
+                                    this.getY() + 60 <= enemyTank.getY() + 60) {
+                                return true;
+                            }
+                            //2. this坦克右下坐标[x+40][y+60]
+                            if (this.getX() + 40 >= enemyTank.getX() &&
+                                    this.getX() + 40 <= enemyTank.getX() + 40 &&
+                                    this.getY() + 60 >= enemyTank.getY() &&
+                                    this.getY() + 60 <= enemyTank.getY() + 60) {
+                                return true;
+                            }
+
+
+                        }
+                        //如果敌人坦克是左右
+                        //范围是[x,x+60][y,y+40]
+                        if (enemyTank.getDirect() == 1 || enemyTank.getDirect() == 3) {
+                            //1.this坦克左下角坐标[x][y+60]
+                            if (this.getX() >= enemyTank.getX() &&
+                                    this.getX() <= enemyTank.getX() + 60 &&
+                                    this.getY() + 60 >= enemyTank.getY() &&
+                                    this.getY() + 60 <= enemyTank.getY() + 40) {
+                                return true;
+                            }
+                            //2. this坦克右下坐标[x+40][y+60]
+                            if (this.getX() + 40 >= enemyTank.getX() &&
+                                    this.getX() + 40 <= enemyTank.getX() + 60 &&
+                                    this.getY() + 60 >= enemyTank.getY() &&
+                                    this.getY() + 60 <= enemyTank.getY() + 40) {
+                                return true;
+                            }
+                        }
+                    }
+
+                }
+                break;
+            case 3://左
+                //让当前this的和其他敌人坦克比较
+                for (int i = 0; i < enemyTanks.size(); i++) {
+                    //从vector中一个敌人坦克
+                    EnemyTank enemyTank = enemyTanks.get(i);
+                    //不要和自己比较
+                    if (enemyTank != this) {
+                        //如果敌人坦克是上下
+                        //范围是[x,x+40][y,y+60]
+                        if (enemyTank.getDirect() == 0 || enemyTank.getDirect() == 2) {
+                            //1.this坦克左上角坐标[x][y]
+                            if (this.getX() >= enemyTank.getX() &&
+                                    this.getX() <= enemyTank.getX() + 40 &&
+                                    this.getY() >= enemyTank.getY() &&
+                                    this.getY() <= enemyTank.getY() + 60) {
+                                return true;
+                            }
+                            //2. this坦克左下坐标[x][y+40]
+                            if (this.getX() >= enemyTank.getX() &&
+                                    this.getX() <= enemyTank.getX() + 40 &&
+                                    this.getY() + 40 >= enemyTank.getY() &&
+                                    this.getY() + 40 <= enemyTank.getY() + 60) {
+                                return true;
+                            }
+
+
+                        }
+                        //如果敌人坦克是左右
+                        //范围是[x,x+60][y,y+40]
+                        if (enemyTank.getDirect() == 1 || enemyTank.getDirect() == 3) {
+                            //1.this坦克左上角坐标[x][y]
+                            if (this.getX() >= enemyTank.getX() &&
+                                    this.getX() <= enemyTank.getX() + 60 &&
+                                    this.getY() >= enemyTank.getY() &&
+                                    this.getY() <= enemyTank.getY() + 40) {
+                                return true;
+                            }
+                            //2. this坦克左下坐标[x][y+40]
+                            if (this.getX() >= enemyTank.getX() &&
+                                    this.getX() <= enemyTank.getX() + 60 &&
+                                    this.getY() + 40 >= enemyTank.getY() &&
+                                    this.getY() + 40 <= enemyTank.getY() + 40) {
+                                return true;
+                            }
+                        }
+                    }
+
+                }
+                break;
+        }
+        return false;
     }
 
     //发射子弹方法
@@ -74,7 +286,9 @@ public class EnemyTank extends Tank implements Runnable {
             switch (getDirect()) {
                 case 0://上
                     for (int i = 0; i < go; i++) {
-                        moveUp();
+                        if (!isTouchEnemyTank()){
+                            moveUp();
+                        }
 
                         try {
                             Thread.sleep(sleep);
@@ -85,7 +299,9 @@ public class EnemyTank extends Tank implements Runnable {
                     break;
                 case 1:
                     for (int i = 0; i < go; i++) {
-                        moveRight();
+                        if (!isTouchEnemyTank()) {
+                            moveRight();
+                        }
 
                         try {
                             Thread.sleep(sleep);
@@ -96,7 +312,9 @@ public class EnemyTank extends Tank implements Runnable {
                     break;
                 case 2:
                     for (int i = 0; i < go; i++) {
-                        moveDown();
+                        if (!isTouchEnemyTank()) {
+                            moveDown();
+                        }
                         try {
                             Thread.sleep(sleep);
                         } catch (InterruptedException e) {
@@ -105,7 +323,9 @@ public class EnemyTank extends Tank implements Runnable {
                     break;
                 case 3:
                     for (int i = 0; i < go; i++) {
-                        moveLeft();
+                        if (!isTouchEnemyTank()) {
+                            moveLeft();
+                        }
                         try {
                             Thread.sleep(sleep);
                         } catch (InterruptedException e) {
@@ -124,7 +344,7 @@ public class EnemyTank extends Tank implements Runnable {
 
     @Override
     public String toString() {
-        return  "EnemyTank{" +
+        return "EnemyTank{" +
                 "shots=" + shots +
                 '}';
     }

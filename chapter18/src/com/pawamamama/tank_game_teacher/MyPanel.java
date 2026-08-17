@@ -413,8 +413,9 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
                 //判断是否存活
                 if (hero.isLive && shot.isLive) {
                     newHitTank(shot, hero,enemyTank);
-                }else{
+                }else {
                     shots.remove(shot);
+                    j--;
                 }
             }
         }

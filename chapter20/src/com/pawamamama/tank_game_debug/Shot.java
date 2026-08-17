@@ -52,40 +52,29 @@ public class Shot implements Runnable {
     }
 
     @Override
-    public void run() {//run行为是射击行为，不停的去改变子弹位置
-        while (true) {
-            //子弹休眠50毫秒
+    public void run() {
+        while (isLive) {
             try {
                 Thread.sleep(50);
             } catch (InterruptedException e) {
-              e.printStackTrace();
-            }
-            //根据方向来改变坐标
-            switch (direct) {
-                case 0://上
-                    y -= speed;
-                    break;
-                case 1://右
-                    x += speed;
-                    break;
-                case 2://下
-                    y += speed;
-                    break;
-                case 3://左
-                    x -= speed;
-                    break;
-            }
-            System.out.println(this.x + " " + this.y + " " + this.direct);
-            //当子弹碰到敌人坦克时，也应该结束线程
-            //子弹死亡就应该退出线程
-            //当子弹移动到面板的边界时，就应该销毁（把启动的子弹线程销毁）
-            if (!(x >=0 && x<= 1000 && y >=0 && y <= 750 && isLive)) {
-                System.out.println("子弹线程退出");
-                isLive = false;//子弹死了
                 break;
             }
 
-        }
+            if (!isLive) {
+                break;
+            }
 
+            switch (direct) {
+                case 0: y -= speed; break;
+                case 1: x += speed; break;
+                case 2: y += speed; break;
+                case 3: x -= speed; break;
+            }
+
+            if (!(x >= 0 && x <= 1000 && y >= 0 && y <= 750)) {
+                isLive = false;
+                System.out.println("子弹线程退出");
+            }
+        }
     }
 }
