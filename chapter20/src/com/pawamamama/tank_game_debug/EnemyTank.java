@@ -35,6 +35,11 @@ public class EnemyTank extends Tank implements Runnable {
         super(x, y);
         setSpeed(3);
     }
+    public EnemyTank(int x, int y, int direct) {
+        super(x, y,direct);
+        setSpeed(3);
+    }
+
 
     //myPanel 对象的EnemyTanks 设置过来
     public void setEnemyTanks(Vector<EnemyTank> enemyTanks) {

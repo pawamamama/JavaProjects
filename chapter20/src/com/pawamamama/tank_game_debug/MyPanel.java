@@ -31,6 +31,8 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
     int y = 200;
     //定义敌人坦克，放入到Vector
     Vector<EnemyTank> enemyTanks = new Vector<>();
+    //定义一个nodes ，用于恢复敌人坦克的坐标和方向
+    Vector<Node> nodes = new Vector<>();
     //敌人个数，初始化为
     int enemyTankSize = 5;
     //定义一个Vector,用于存放炸弹
@@ -41,24 +43,42 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
     Image image2 = null;
     Image image3 = null;
 
-    public MyPanel() {
+    public MyPanel(String key ) {
+        nodes = Recorder.getNodesAndEnemyTanksRec();
         //将敌方坦克vector设置给Record 对象
         Recorder.setEnemyTanks(enemyTanks);
         hero = new Hero(x, y);//初始化自己的坦克
-        //设置速度
-        //hero.setSpeed(10);
-        //for循环初始化敌方坦克
-        for (int i = 0; i < enemyTankSize; i++) {
-            //初始化并横向分布敌方坦克
-            EnemyTank enemyTank = new EnemyTank(100 * (i + 1), 0);
-            //将enemyTanks 设置给 enemyTank,广播给所有敌人
-            enemyTank.setEnemyTanks(enemyTanks);
-            //初始绘制炮管为向下所以方向要初始化为2
-            enemyTank.setDirect(2);
-            //启动敌人坦克线程
-            new Thread(enemyTank).start();
-            //加入到集合中
-            enemyTanks.add(enemyTank);
+        switch (key) {
+            case "1":
+                //for循环初始化敌方坦克
+                for (int i = 0; i < enemyTankSize; i++) {
+                    //初始化并横向分布敌方坦克
+                    EnemyTank enemyTank = new EnemyTank(100 * (i + 1), 0);
+                    //将enemyTanks 设置给 enemyTank,广播给所有敌人
+                    enemyTank.setEnemyTanks(enemyTanks);
+                    //初始绘制炮管为向下所以方向要初始化为2
+                    enemyTank.setDirect(2);
+                    //启动敌人坦克线程
+                    new Thread(enemyTank).start();
+                    //加入到集合中
+                    enemyTanks.add(enemyTank);
+
+                }
+                break;
+            case "2"://继续上局游戏
+                for (int i = 0; i <nodes.size(); i++) {
+                    Node node = nodes.get(i);
+                    EnemyTank enemyTank = new EnemyTank(node.getX(),node.getY() ,node.getDirect());
+                    //将enemyTanks 设置给 enemyTank,广播给所有敌人
+                    enemyTank.setEnemyTanks(enemyTanks);
+                    //启动敌人坦克线程
+                    new Thread(enemyTank).start();
+                    //加入到集合中
+                    enemyTanks.add(enemyTank);
+                }
+                break;
+            default:
+                System.out.println("输入有误");
 
         }
         //初始化炸弹图片

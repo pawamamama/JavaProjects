@@ -54,6 +54,11 @@ public class Tank {
         this.y = y;
     }
 
+    public Tank(int x, int y, int direct) {
+        this.x = x;
+        this.y = y;
+        this.direct = direct;
+    }
 
     //移动方法
     public void moveUp() {

@@ -3,6 +3,7 @@ package com.pawamamama.tank_game_debug;
 import javax.swing.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.Scanner;
 
 /**
  * Class: pawaTankGame 游戏窗口区域
@@ -17,13 +18,15 @@ import java.awt.event.WindowEvent;
 public class pawaTankGame extends JFrame {
     //定义Mypanel
     MyPanel mp = null;
-
+    static Scanner  scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        new pawaTankGame();
+        pawaTankGame pawaTankGame = new pawaTankGame();
     }
 
     public pawaTankGame() {
-        mp = new MyPanel();
+        System.out.println("请输入选择1:新游戏 2:继续上局");
+        String key = scanner.next();
+        mp = new MyPanel(key);
         //将mp放入到 Thread并启动
         Thread thread = new Thread(mp);
         thread.start();
