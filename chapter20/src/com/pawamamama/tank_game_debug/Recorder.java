@@ -1,7 +1,6 @@
 package com.pawamamama.tank_game_debug;
 
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Vector;
