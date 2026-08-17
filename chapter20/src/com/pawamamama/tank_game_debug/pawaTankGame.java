@@ -17,6 +17,7 @@ import java.awt.event.WindowEvent;
 public class pawaTankGame extends JFrame {
     //定义Mypanel
     MyPanel mp = null;
+
     public static void main(String[] args) {
         new pawaTankGame();
     }
@@ -27,7 +28,7 @@ public class pawaTankGame extends JFrame {
         Thread thread = new Thread(mp);
         thread.start();
         this.add(mp);//把面板（游戏区域）放入窗口
-        this.setSize(1100,850);
+        this.setSize(1100, 850);
         this.addKeyListener(mp);//窗口监听键盘输入mp实现了key
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);//默认显示
@@ -37,7 +38,8 @@ public class pawaTankGame extends JFrame {
 
             @Override
             public void windowClosing(WindowEvent e) {
-               Recorder.keepRecording();
+
+                Recorder.keepRecording();
                 System.exit(0);
             }
         });

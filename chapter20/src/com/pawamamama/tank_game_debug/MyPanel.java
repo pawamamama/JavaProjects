@@ -42,6 +42,8 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
     Image image3 = null;
 
     public MyPanel() {
+        //将敌方坦克vector设置给Record 对象
+        Recorder.setEnemyTanks(enemyTanks);
         hero = new Hero(x, y);//初始化自己的坦克
         //设置速度
         //hero.setSpeed(10);
