@@ -44,13 +44,13 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
     Image image2 = null;
     Image image3 = null;
 
-    public MyPanel(String key ) {
+    public MyPanel(String key) {
         //现判断记录文件是否存在
         //不存在就把key = "1"
         File file = new File(Recorder.getRecordFile());
         if (file.exists()) {
             nodes = Recorder.getNodesAndEnemyTanksRec();
-        }else {
+        } else {
             System.out.println("第一次开始游戏或者上一局不存在所以开始新游戏");
             key = "1";
         }
@@ -65,6 +65,8 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
                     EnemyTank enemyTank = new EnemyTank(100 * (i + 1), 0);
                     //将enemyTanks 设置给 enemyTank,广播给所有敌人
                     enemyTank.setEnemyTanks(enemyTanks);
+                    //将enemyTanks 设置给玩家防止坦克重叠
+                    hero.setEnemyTanks(enemyTanks);
                     //初始绘制炮管为向下所以方向要初始化为2
                     enemyTank.setDirect(2);
                     //启动敌人坦克线程
@@ -75,11 +77,13 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
                 }
                 break;
             case "2"://继续上局游戏
-                for (int i = 0; i <nodes.size(); i++) {
+                for (int i = 0; i < nodes.size(); i++) {
                     Node node = nodes.get(i);
-                    EnemyTank enemyTank = new EnemyTank(node.getX(),node.getY() ,node.getDirect());
+                    EnemyTank enemyTank = new EnemyTank(node.getX(), node.getY(), node.getDirect());
                     //将enemyTanks 设置给 enemyTank,广播给所有敌人
                     enemyTank.setEnemyTanks(enemyTanks);
+                    //将enemyTanks 设置给玩家防止坦克重叠
+                    hero.setEnemyTanks(enemyTanks);
                     //启动敌人坦克线程
                     new Thread(enemyTank).start();
                     //加入到集合中
@@ -397,7 +401,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
                     //取出坦克,依次对比我方子弹是否击中敌方坦克
                     EnemyTank enemyTank = enemyTanks.get(j);
                     //hitTank(shot, enemyTank);
-                    newHitTank(shot,enemyTank,enemyTank);
+                    newHitTank(shot, enemyTank, enemyTank);
                 }
             } else {
                 shots.remove(shot);
@@ -423,7 +427,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
                     //当我们的子弹击中敌人坦克后，将敌人坦克从Vector中去掉
                     enemyTanks.remove(tank);
                     //当我方击毁一个敌人坦克时，就allEnemyTankNum++
-                    if (tank instanceof EnemyTank){
+                    if (tank instanceof EnemyTank) {
                         Recorder.addallEnemyTankNum();
                     }
                     //创建炸弹对象加入到bombs集合中
@@ -445,7 +449,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
                     //当我们的子弹击中敌人坦克后，将敌人坦克从Vector中去掉
                     enemyTanks.remove(tank);
                     //当我方击毁一个敌人坦克时，就allEnemyTankNum++
-                    if (tank instanceof EnemyTank){
+                    if (tank instanceof EnemyTank) {
                         Recorder.addallEnemyTankNum();
                     }
                     //创建炸弹对象加入到bombs集合中
@@ -553,21 +557,29 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
     @Override
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_W
-                || e.getKeyCode() == KeyEvent.VK_UP) {       // 上
+                || e.getKeyCode() == KeyEvent.VK_UP) {// 上
             hero.setDirect(0);
-            hero.moveUp();
+            if (hero.canMove(0)) {
+                hero.moveUp();
+            }
         } else if (e.getKeyCode() == KeyEvent.VK_D
                 || e.getKeyCode() == KeyEvent.VK_RIGHT) {   // 右
             hero.setDirect(1);
-            hero.moveRight();
+            if (hero.canMove(1)) {
+                hero.moveRight();
+            }
         } else if (e.getKeyCode() == KeyEvent.VK_S
                 || e.getKeyCode() == KeyEvent.VK_DOWN) {    // 下
             hero.setDirect(2);
-            hero.moveDown();
+            if (hero.canMove(2)) {
+                hero.moveDown();
+            }
         } else if (e.getKeyCode() == KeyEvent.VK_A
-                || e.getKeyCode() == KeyEvent.VK_LEFT) {    // 左
+                || e.getKeyCode() == KeyEvent.VK_LEFT) {// 左
             hero.setDirect(3);
-            hero.moveLeft();
+            if (hero.canMove(3)) {
+                hero.moveLeft();
+            }
         }
         //如果用户按下的是 j 就发射子弹
         if (e.getKeyCode() == KeyEvent.VK_J) {
