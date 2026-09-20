@@ -25,6 +25,8 @@ import java.net.UnknownHostException;
  */
 @SuppressWarnings({"all"})
 public class UserClientService {
+    //
+    boolean b = false;
     private User u = new User();//可能要在其他地方使用user信息
     private Socket socket;
 
@@ -53,16 +55,24 @@ public class UserClientService {
             Message ms = (Message) ois.readObject();
             //判断登录
             if (ms.getMesType().equals(MessageType.MESSAGE_LOGIN_SUCCEED) ){//登录成功
+                //
+                b  = true;
                 //发起一个线程，让线程持有socket
                 // 让该线程保持和服务端通信-> 线程类（ClientConnectServerThread）客户端连接服务器线程
 
-            }else {
-                return   false;
+                //启动线程
+                final ClientConnectServerThread ccst = new ClientConnectServerThread(socket);
+                ccst.start();
+                //这里为了扩展放到一个集合中管理
+                ManageClientServerThread.addClilenServerThread(userId,ccst);
+
+            }else {//登录失败直接返回
+                return b;
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return
+        return b;
     }
 }
