@@ -1,4 +1,4 @@
-package com.pawamamama.qqcommon.qqcommon;
+package com.pawamamama.qqcommon;
 
 import java.io.Serializable;
 
@@ -32,6 +32,9 @@ public class User implements Serializable {
 
     private String userId;//用户id/用户名
     private String prasswd;
+
+    public User() {
+    }
 
     public User(String userId, String prasswd) {
         this.userId = userId;

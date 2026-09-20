@@ -1,4 +1,4 @@
-package com.pawamamama.qqcommon.qqcommon;
+package com.pawamamama.qqcommon;
 /**
  * 表示消息类型
  *

@@ -1,4 +1,4 @@
-package com.pawamamama.qqcommon.qqcommon;
+package com.pawamamama.qqcommon;
 
 import java.io.Serializable;
 

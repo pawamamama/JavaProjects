@@ -1,4 +1,4 @@
-package com.pawamamama.qqcommon.qqclient.utils;
+package com.pawamamama.qqclient.utils;
 
 
 /**

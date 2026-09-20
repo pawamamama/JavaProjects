@@ -1,8 +1,6 @@
-package com.pawamamama.qqcommon.qqclient.view;
+package com.pawamamama.qqclient.view;
 
-import com.pawamamama.qqcommon.qqclient.utils.Utility;
-
-import javax.rmi.CORBA.Util;
+import com.pawamamama.qqclient.utils.Utility;
 
 /**
  * Class: QQView
@@ -40,6 +38,7 @@ public class QQView {
                     System.out.print("请输入密码：");
                     String userPwd = Utility.readString(20);
                     //需要到服务端该用户是否合法
+                    //这里编写一个类 UserClientService[用户登录/注册]
                     //以后写
                     if (false) {//先把逻辑打通，这里调用方法，把userId and pwd 发给服务器
                         System.out.println("========== 欢迎" + userId + "  ==========");
