@@ -34,6 +34,8 @@ public class ClientConnectServerThread extends  Thread{
                         new ObjectInputStream(socket.getInputStream());
                 //反序列化，如果通道里没有对象传输过来会一直阻塞在这里
                 Message message = (Message) ois.readObject();//阻塞
+                //后面我们去使用这个message
+
              } catch (Exception e) {
                 e.printStackTrace();
             }

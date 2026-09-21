@@ -7,6 +7,7 @@ import java.util.HashMap;
  *
  * <pre>管理客户端服务器线程
  * 管理客户端连接到服务器的线程的类
+ * 将来客户端可能有多个socket
  * </pre>
  *
  * @author pawamamama
