@@ -59,7 +59,7 @@ public class QQServer {
 
                 } else {//登录失败
                     //设置消息
-                    message.setMesType(MessageType.MESSAGE_LOGIN_FAI);
+                    message.setMesType(MessageType.MESSAGE_LOGIN_FAIL);
                     oos.writeObject(message);//发送
                     //登录失败要关闭socket
                     socket.close();

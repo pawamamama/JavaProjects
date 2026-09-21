@@ -9,6 +9,6 @@ public interface MessageType {
     //2.不同常量值，表示不同的消息类型
     //3.接口中 字段默认 final static 修饰
     String MESSAGE_LOGIN_SUCCEED = "1";//表示登录成功
-    String MESSAGE_LOGIN_FAI = "2";//表示登录失败
+    String MESSAGE_LOGIN_FAIL = "2";//表示登录失败
 
 }
