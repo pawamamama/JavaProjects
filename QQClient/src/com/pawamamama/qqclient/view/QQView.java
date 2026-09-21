@@ -1,5 +1,6 @@
 package com.pawamamama.qqclient.view;
 
+import com.pawamamama.qqclient.service.UserClientService;
 import com.pawamamama.qqclient.utils.Utility;
 
 /**
@@ -16,6 +17,8 @@ public class QQView {
     //控制显示循环
     private boolean loop = true;
     private String key = "";//接收用户键盘输入
+    //用于登录服务器，注册用户
+    private UserClientService userClientService = new UserClientService();
 
     public static void main(String[] args) {
         new QQView().mainMenu();
@@ -39,8 +42,8 @@ public class QQView {
                     String userPwd = Utility.readString(20);
                     //需要到服务端该用户是否合法
                     //这里编写一个类 UserClientService[用户登录/注册]
-                    //以后写
-                    if (false) {//先把逻辑打通，这里调用方法，把userId and pwd 发给服务器
+                    //使用该类检查用户
+                    if (userClientService.checkUser(userId,userPwd)) {//先把逻辑打通，这里调用方法，把userId and pwd 发给服务器
                         System.out.println("========== 欢迎" + userId + "  ==========");
                         //二级菜单
                         while (loop) {
