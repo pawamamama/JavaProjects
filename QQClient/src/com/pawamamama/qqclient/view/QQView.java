@@ -44,7 +44,7 @@ public class QQView {
                     //这里编写一个类 UserClientService[用户登录/注册]
                     //使用该类检查用户
                     if (userClientService.checkUser(userId,userPwd)) {//先把逻辑打通，这里调用方法，把userId and pwd 发给服务器
-                        System.out.println("========== 欢迎" + userId + "  ==========");
+                        System.out.println("========== 欢迎" + userId + " 登录成功 ==========");
                         //二级菜单
                         while (loop) {
                             System.out.println("\n========== 网络通讯系统二级菜单(用户 " + userId + ") ==========");
