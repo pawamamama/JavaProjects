@@ -19,11 +19,11 @@ public class ManageClientServerThread {
     private static HashMap<String,ClientConnectServerThread> hm = new HashMap<>();
 
     //将某个线程加入到文件中
-    public static void addClilenServerThread(String userId,ClientConnectServerThread cct) {
+    public static void addClilentServerThread(String userId,ClientConnectServerThread cct) {
         hm.put(userId,cct);
     }
     //取出某个线程,通过id
-    public static  ClientConnectServerThread getClilenServerThread(String userId) {
+    public static  ClientConnectServerThread getClilentServerThread(String userId) {
         return hm.get(userId);
     }
 
