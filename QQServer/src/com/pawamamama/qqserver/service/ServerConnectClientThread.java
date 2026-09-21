@@ -27,7 +27,7 @@ public class ServerConnectClientThread extends Thread {
     @Override
     public void run() {//线程处于run ，可以发送接收消息
         while (true) {
-            System.out.println("服务端和客户端保持通讯，读取数据");
+            System.out.println("服务端和客户端"+ userId + "保持通讯，读取数据");
             try {
                 ObjectInputStream ois =
                         new ObjectInputStream(socket.getInputStream());
