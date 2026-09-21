@@ -34,6 +34,9 @@ public class QQServer {
                 //得到socket关联的对象输入流
                 ObjectInputStream ois =
                         new ObjectInputStream(socket.getInputStream());
+                //先创建一个输出流用于写出msg对象
+                ObjectOutputStream oos =
+                        new ObjectOutputStream(socket.getOutputStream());
                 //第一次发过来的一定是一个User对象
                 User u = (User) ois.readObject();
                 //实际上后台是有一个数据库去验证id pwd
@@ -44,8 +47,6 @@ public class QQServer {
                     //设置登录成功
                     message.setMesType(MessageType.MESSAGE_LOGIN_SUCCEED);
                     //给连接的客户端发送Message对象
-                    ObjectOutputStream oos =
-                            new ObjectOutputStream(socket.getOutputStream());
                     oos.writeObject(message);
                     //创建一个线程和客户端保持通讯，该线程需要持有socket对象
                     final ServerConnectClientThread serverConnectClientThread
@@ -53,14 +54,27 @@ public class QQServer {
                     //启动该线程
                     serverConnectClientThread.start();
                     //把该线程对象放入到集合中管理
+                    ManageClientThreads.
+                            addClientThread(u.getUserId(), serverConnectClientThread);
 
                 } else {//登录失败
-
+                    //设置消息
+                    message.setMesType(MessageType.MESSAGE_LOGIN_FAI);
+                    oos.writeObject(message);//发送
+                    //登录失败要关闭socket
+                    socket.close();
                 }
             }
             //扩大范围
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            //如果服务端退出了while循环说明服务端不在监听因此需要关闭资源
+            try {
+                ss.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
