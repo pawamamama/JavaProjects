@@ -61,7 +61,7 @@ public class UserClientService {
                 final ClientConnectServerThread ccst = new ClientConnectServerThread(socket);
                 ccst.start();
                 //这里为了扩展放到一个集合中管理
-                ManageClientServerThread.addClilenServerThread(userId,ccst);
+                ManageClientServerThread.addClilentServerThread(userId,ccst);
                 //登录成功
                 b  = true;
             }else {//登录失败，就不能启动和服务器通讯的线程，所以要关闭socket
