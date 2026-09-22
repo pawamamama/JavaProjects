@@ -59,6 +59,8 @@ public class QQServer {
 
                 } else {//登录失败
                     //设置消息
+                    System.out.println("登录失败 用户名：" + u.getUserId()
+                            + "密码：" + u.getPrasswd() );
                     message.setMesType(MessageType.MESSAGE_LOGIN_FAIL);
                     oos.writeObject(message);//发送
                     //登录失败要关闭socket
