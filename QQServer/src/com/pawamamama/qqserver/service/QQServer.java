@@ -9,6 +9,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.HashMap;
 
 /**
  * Class: QQServer
@@ -22,7 +23,29 @@ import java.net.Socket;
 @SuppressWarnings({"all"})
 public class QQServer {
     private ServerSocket ss = null;
+    //创建一个集合，存放多个用户，这些用户登录认为合法
+    private static HashMap<String, User> validUsers = new HashMap<>();
+    //类加载时会加载静态代码快
+    static {//初始化 validUsers
+        validUsers.put("100",new User("100","123456"));
+        validUsers.put("200",new User("200","123456"));
+        validUsers.put("300",new User("300","123456"));
+        validUsers.put("至尊宝",new User("至尊宝","123456"));
+        validUsers.put("紫霞仙子",new User("紫霞仙子","123456"));
+        validUsers.put("菩提老祖",new User("菩提老祖","123456"));
+    }
+    //验证用户是否有效的方法
+    private static boolean checkUser(String userId,String UserPwd){
+         User user = validUsers.get(userId);
+         if (user == null){//没有存在与集合中
+             return false;
+         }
+         if (!user.getPrasswd().equals(UserPwd)){
 
+             return false;
+         }
+         return true;//通过
+    }
     public QQServer() {
         //端口可以写在一个配置文件中
         System.out.println("服务端在9999端口监听");
@@ -39,11 +62,11 @@ public class QQServer {
                         new ObjectOutputStream(socket.getOutputStream());
                 //第一次发过来的一定是一个User对象
                 User u = (User) ois.readObject();
-                //实际上后台是有一个数据库去验证id pwd
-                //这里先规定 id = 100 pwd = 123456
+                //实际上后台是有一个数据库去验证id pwd，这里用集合
                 //写一个message对象,准备回复客户端的消息，登录成败与否都要回送消息
                 Message message = new Message();
-                if (u.getUserId().equals("100") && u.getPrasswd().equals("123456")) {//合法用户
+                //写一个验证用户的方法
+                if (checkUser(u.getUserId(),u.getPrasswd())) {//合法用户
                     //设置登录成功
                     message.setMesType(MessageType.MESSAGE_LOGIN_SUCCEED);
                     //给连接的客户端发送Message对象
