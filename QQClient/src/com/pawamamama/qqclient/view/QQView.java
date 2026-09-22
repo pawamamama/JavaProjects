@@ -57,7 +57,9 @@ public class QQView {
                             key = Utility.readString(1);
                             switch (key) {
                                 case "1":
-                                    System.out.println("显示在线用户列表");
+                                    //System.out.println("显示在线用户列表");
+                                    //写一个方法获取在线用户列表
+                                    userClientService.onlineFriendList();
                                     break;
                                 case "2":
                                     System.out.println("\t\t 2 群发消息");

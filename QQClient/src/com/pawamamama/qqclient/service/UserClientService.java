@@ -54,17 +54,17 @@ public class UserClientService {
             //反序列化得到服务器回送的消息
             Message ms = (Message) ois.readObject();
             //判断登录
-            if (ms.getMesType().equals(MessageType.MESSAGE_LOGIN_SUCCEED) ){//登录成功
+            if (ms.getMesType().equals(MessageType.MESSAGE_LOGIN_SUCCEED)) {//登录成功
                 //发起一个线程，让线程持有socket
                 // 让该线程保持和服务端通信-> 线程类（ClientConnectServerThread）客户端连接服务器线程
                 //启动线程
                 final ClientConnectServerThread ccst = new ClientConnectServerThread(socket);
                 ccst.start();
                 //这里为了扩展放到一个集合中管理
-                ManageClientServerThread.addClilentServerThread(userId,ccst);
+                ManageClientServerThread.addClilentServerThread(userId, ccst);
                 //登录成功
-                b  = true;
-            }else {//登录失败，就不能启动和服务器通讯的线程，所以要关闭socket
+                b = true;
+            } else {//登录失败，就不能启动和服务器通讯的线程，所以要关闭socket
                 socket.close();
             }
         } catch (Exception e) {
@@ -72,5 +72,25 @@ public class UserClientService {
         }
 
         return b;//如果到这里就是登录失败直接返回false
+    }
+
+    //向服务器端请求在线用户列表
+    public void onlineFriendList() {
+        //发送一个Message
+        Message message = new Message();
+        message.setMesType(MessageType.MESSAGE_GET_ONLINE_FRIEND);
+        //发送给服务器
+        try {
+            //获取到当前线程的Socket
+            ObjectOutputStream oos =
+                    new ObjectOutputStream(
+                            //先从管理线程的集合类获取到持有该Socket的线程，然后获取socket,在从socket中拿出输出流
+                            ManageClientServerThread.getClilentServerThread(u.getUserId())
+                                    .getSocket().getOutputStream());
+            oos.writeObject(message);//发送
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
