@@ -22,6 +22,9 @@ public class Message  implements Serializable {
     private String sendTime;//发送时间
     private String mesType;//消息类型 -可以在接口中定义消息类型（图片，视频，纯消息）
 
+    public Message() {
+    }
+
     public Message(String sender, String getter, String content, String sendTime, String mesType) {
         this.sender = sender;
         this.getter = getter;
