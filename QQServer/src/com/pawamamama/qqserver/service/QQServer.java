@@ -10,6 +10,7 @@ import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Class: QQServer
@@ -24,8 +25,9 @@ import java.util.HashMap;
 public class QQServer {
     private ServerSocket ss = null;
     //创建一个集合，存放多个用户，这些用户登录认为合法
+    //这里也可以使用ConcurrentHashMap可以处理并发的集合，没有线程安全问题，这里只读可以不用
     private static HashMap<String, User> validUsers = new HashMap<>();
-    //类加载时会加载静态代码快
+    //类加载时x会加载静态代码快
     static {//初始化 validUsers
         validUsers.put("100",new User("100","123456"));
         validUsers.put("200",new User("200","123456"));
