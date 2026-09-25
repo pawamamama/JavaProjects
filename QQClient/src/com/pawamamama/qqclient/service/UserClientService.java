@@ -79,6 +79,8 @@ public class UserClientService {
         //发送一个Message
         Message message = new Message();
         message.setMesType(MessageType.MESSAGE_GET_ONLINE_FRIEND);
+        //设置发送者
+        message.setSender(u.getUserId());
         //发送给服务器
         try {
             //获取到当前线程的Socket
