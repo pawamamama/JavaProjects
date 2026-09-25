@@ -95,4 +95,27 @@ public class UserClientService {
             e.printStackTrace();
         }
     }
+    //编写方法退出客户端，并给服务端发送一个退出系统的massage
+    public void logout() {
+        final Message message = new Message();
+        //设置消息类型
+        message.setMesType(MessageType.MESSAGE_CLIENT_EXIT);
+        //设置发送者
+        message.setSender(u.getUserId());//指定哪个客户端，要删除集合
+        try {
+            //发送
+            final ObjectOutputStream oos =
+                    new ObjectOutputStream(socket.getOutputStream());
+            //还可以
+            /*new ObjectOutputStream(ManageClientServerThread.
+            getClilentServerThread(u.getUserId()).getSocket().
+            getOutputStream()).writeObject(message);*/
+            //不过太长了
+            oos.writeObject(message);
+            System.out.println(u.getUserId()+" 退出了系统");
+            System.exit(0);//结束进程
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

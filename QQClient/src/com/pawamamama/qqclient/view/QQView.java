@@ -71,6 +71,8 @@ public class QQView {
                                     System.out.println("\t\t 4 发送文件");
                                     break;
                                 case "9":
+                                    //调用方法，给服务器发送退出系统的massage
+                                    userClientService.logout();
                                     loop = false;
                                 default:
                                     System.out.println("输入错误，请重新输入");
