@@ -46,14 +46,14 @@ public class QQView {
                     if (userClientService.checkUser(userId,userPwd)) {//先把逻辑打通，这里调用方法，把userId and pwd 发给服务器
                         System.out.println("========== 欢迎" + userId + " 登录成功 ==========");
                         //二级菜单
+                        System.out.println("\n========== 网络通讯系统二级菜单(用户 " + userId + ") ==========");
+                        System.out.println("\t\t 1 显示在线用户列表");
+                        System.out.println("\t\t 2 群发消息");
+                        System.out.println("\t\t 3 私聊消息");
+                        System.out.println("\t\t 4 发送文件");
+                        System.out.println("\t\t 9 退出系统");
+                        System.out.print("请输入你的选择：");
                         while (loop) {
-                            System.out.println("\n========== 网络通讯系统二级菜单(用户 " + userId + ") ==========");
-                            System.out.println("\t\t 1 显示在线用户列表");
-                            System.out.println("\t\t 2 群发消息");
-                            System.out.println("\t\t 3 私聊消息");
-                            System.out.println("\t\t 4 发送文件");
-                            System.out.println("\t\t 9 退出系统");
-                            System.out.print("请输入你的选择：");
                             key = Utility.readString(1);
                             switch (key) {
                                 case "1":
