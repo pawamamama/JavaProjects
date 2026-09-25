@@ -45,7 +45,7 @@ public class ClientConnectServerThread extends  Thread{
                     //100 200 紫霞仙子
                     //客户端用空格分割
                      String[] onlineUser = message.getContent().split(" ");
-                    System.out.println("\t\t========== 当前用户列表 ==========");
+                    System.out.println("\n\t\t========== 当前在线用户列表 ==========");
                     //取出列表
                     for (String user : onlineUser) {
                         System.out.println(user);
