@@ -3,6 +3,7 @@ package com.pawamamama.qqserver.service;
 import com.pawamamama.qqcommon.User;
 
 import java.util.HashMap;
+import java.util.Set;
 
 /**
  * Class: ManageClientThread
@@ -25,5 +26,14 @@ public class ManageClientThreads {
     //获取该线程，根据userid返回线程
     public static ServerConnectClientThread getServerConnectClientThread(String userId,ServerConnectClientThread serverConnectClientThread){
         return hm.get(userId);
+    }
+    //编写方法，返回在线用户列表
+    public static String getOnlineUser() {
+        String allUser = "";
+        //遍历集合的key
+        for (String s : hm.keySet()) {
+            allUser += s + " ";
+        }
+        return allUser;
     }
 }
