@@ -52,6 +52,8 @@ public class ServerConnectClientThread extends Thread {
                     oos.writeObject(message1);
                 }else if(message.getMesType().equals(MessageType.MESSAGE_CLIENT_EXIT)) {//客户端退出
                     System.out.println(message.getSender() + " 退出客户端");
+                    //修复服务端eof异常
+                    sleep(1);
                     //将客户端对应线程从集合中删除
                     ManageClientThreads.removeClientThread(userId);
                     socket.close();//关闭该线程持有的socket，其他的不受影响，多线程编程
