@@ -38,6 +38,7 @@ public class ServerConnectClientThread extends Thread {
                 if (message.getMesType().equals(MessageType.MESSAGE_GET_ONLINE_FRIEND)) {
                     //客户端要在线用户列表
                     System.out.println(message.getSender() + " 该用户要在线用户列表");
+                    //向管理socket的类要在线用户
                     final String onlineUser = ManageClientThreads.getOnlineUser();
                     //准备发送给服务器，用message返回
                     final Message message1 = new Message();
@@ -49,8 +50,15 @@ public class ServerConnectClientThread extends Thread {
                     //写入到数据通道
                     final ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
                     oos.writeObject(message1);
-                }else {
-                    System.out.println("其他类型的message");
+                }else if(message.getMesType().equals(MessageType.MESSAGE_CLIENT_EXIT)) {//客户端退出
+                    System.out.println(message.getSender() + " 退出客户端");
+                    //将客户端对应线程从集合中删除
+                    ManageClientThreads.removeClientThread(userId);
+                    socket.close();//关闭该线程持有的socket，其他的不受影响，多线程编程
+                    //退出线程
+                    break;//退出外循环
+                } else {
+                    System.out.println("其他类型");
                 }
              } catch (Exception e) {
                 e.printStackTrace();

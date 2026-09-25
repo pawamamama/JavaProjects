@@ -23,8 +23,12 @@ public class ManageClientThreads {
     public static void addClientThread(String userId,ServerConnectClientThread serverConnectClientThread){
         hm.put(userId,serverConnectClientThread);
     }
+    //根据id删除线程
+    public static void removeClientThread(String userId){
+        hm.remove(userId);
+    }
     //获取该线程，根据userid返回线程
-    public static ServerConnectClientThread getServerConnectClientThread(String userId,ServerConnectClientThread serverConnectClientThread){
+    public static ServerConnectClientThread getServerConnectClientThread(String userId){
         return hm.get(userId);
     }
     //编写方法，返回在线用户列表
