@@ -37,8 +37,9 @@ public class MessageClientService {
         message.setContent(content);
         //时间格式化
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-        message.setSendTime(sdf.format(new Date()));
-        System.out.println(senderId + "对 " + getterId+"说: " + content);
+        String time;
+        message.setSendTime(time = sdf.format(new Date()));
+        System.out.println( ":=>["+time + "]<=:" + senderId + "对 " + getterId+"说: " + content);
         //发送给服务端
         //拿到socket
         try {

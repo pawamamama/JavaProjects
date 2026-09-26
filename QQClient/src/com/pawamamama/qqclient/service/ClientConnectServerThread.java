@@ -17,17 +17,19 @@ import java.net.Socket;
  * @date 2026/9/20
  */
 @SuppressWarnings({"all"})
-public class ClientConnectServerThread extends  Thread{
+public class ClientConnectServerThread extends Thread {
     //该线程需要持有Socket
     private Socket socket;
+
     //构造器可以接收一个Socket
-    public  ClientConnectServerThread(Socket socket){
+    public ClientConnectServerThread(Socket socket) {
         this.socket = socket;
     }
+
     @Override
-    public void  run(){
+    public void run() {
         //因为Thread需要在后台和服务器通讯，因此我们做成一个while循环
-        while (true){
+        while (true) {
             try {
                 System.out.println("客户端线程，等待读取从服务器端发送的消息");
                 //一直读取
@@ -44,7 +46,7 @@ public class ClientConnectServerThread extends  Thread{
                     //服务端用空格隔开发送
                     //100 200 紫霞仙子
                     //客户端用空格分割
-                     String[] onlineUser = message.getContent().split(" ");
+                    String[] onlineUser = message.getContent().split(" ");
                     System.out.println("\n\t\t========== 当前在线用户列表 ==========");
                     //取出列表
                     for (String user : onlineUser) {
@@ -52,17 +54,18 @@ public class ClientConnectServerThread extends  Thread{
                     }
                 } else if (message.getMesType().equals(MessageType.MESSAGE_COMM_MES)) {//普通聊天消息
                     //把从服务器端转发的消息显示到控制台
-                    System.out.println("\n"+message.getSendTime() + message.getSender() +
+                    System.out.println(":=>[" + message.getSendTime() + "]<=:" + message.getSender() +
                             " 对" + message.getGetter() + " 说 :" + message.getContent());
                 } else {
                     System.out.println("其他类型暂时不处理");
                 }
 
-             } catch (Exception e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
     }
+
     //为了更方便得到Socket
     public Socket getSocket() {
         return socket;
