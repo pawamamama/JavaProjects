@@ -22,14 +22,20 @@ public class ServerConnectClientThread extends Thread {
     private Socket socket;
     //需要知道服务端和谁通信的，所以要用户id
     private String userId;
-    public  ServerConnectClientThread(Socket socket, String userId) {
+
+    public ServerConnectClientThread(Socket socket, String userId) {
         this.socket = socket;
         this.userId = userId;
     }
+
+    public Socket getSocket() {
+        return socket;
+    }
+
     @Override
     public void run() {//线程处于run ，可以发送接收消息
         while (true) {
-            System.out.println("服务端和客户端"+ userId + "保持通讯，读取数据");
+            System.out.println("服务端和客户端" + userId + "保持通讯，读取数据");
             try {
                 ObjectInputStream ois =
                         new ObjectInputStream(socket.getInputStream());
@@ -50,7 +56,19 @@ public class ServerConnectClientThread extends Thread {
                     //写入到数据通道
                     final ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
                     oos.writeObject(message1);
-                }else if(message.getMesType().equals(MessageType.MESSAGE_CLIENT_EXIT)) {//客户端退出
+                } else if (message.getMesType().equals(MessageType.MESSAGE_COMM_MES)) {//普通私聊
+                    //转发消息
+                    //根据对应message获取getterId，得到对应线程
+                    final ServerConnectClientThread scct =
+                            ManageClientThreads.getServerConnectClientThread(message.getGetter());
+                    //通过线程获取对应的对象输出流，将message对象转发给指定的客户端
+                    final ObjectOutputStream oos
+                            //先获取socket再获取输出流
+                            = new ObjectOutputStream(scct.getSocket().getOutputStream());
+                    //转发消息给接收者
+                    oos.writeObject(message);//如果客户不在线，可以保存到数据库，可以实现离线留言，上线再发送
+
+                } else if (message.getMesType().equals(MessageType.MESSAGE_CLIENT_EXIT)) {//客户端退出
                     System.out.println(message.getSender() + " 退出客户端");
                     //修复服务端eof异常
                     sleep(1);
@@ -62,7 +80,7 @@ public class ServerConnectClientThread extends Thread {
                 } else {
                     System.out.println("其他类型");
                 }
-             } catch (Exception e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
