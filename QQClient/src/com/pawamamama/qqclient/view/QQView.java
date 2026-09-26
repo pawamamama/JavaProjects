@@ -65,7 +65,11 @@ public class QQView {
                                     System.out.println("\t\t 2 群发消息");
                                     break;
                                 case "3":
-                                    System.out.println("\t\t 3 私聊消息");
+                                    System.out.print("请输入想聊天的用户名（在线）: ");
+                                    final String getterId = Utility.readString(50);
+                                    System.out.print("请输入想说的话: ");
+                                    final String content = Utility.readString(100);
+                                    //编写一个方法，将消息发送给服务端
                                     break;
                                 case "4":
                                     System.out.println("\t\t 4 发送文件");
