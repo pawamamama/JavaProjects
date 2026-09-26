@@ -1,5 +1,6 @@
 package com.pawamamama.qqclient.view;
 
+import com.pawamamama.qqclient.service.MessageClientService;
 import com.pawamamama.qqclient.service.UserClientService;
 import com.pawamamama.qqclient.utils.Utility;
 
@@ -19,7 +20,8 @@ public class QQView {
     private String key = "";//接收用户键盘输入
     //用于登录服务器，注册用户
     private UserClientService userClientService = new UserClientService();
-
+    //用于用户私聊
+    private MessageClientService messageClientService = new MessageClientService();
     public static void main(String[] args) {
         new QQView().mainMenu();
         System.out.println("客户端退出系统");
@@ -70,6 +72,7 @@ public class QQView {
                                     System.out.print("请输入想说的话: ");
                                     final String content = Utility.readString(100);
                                     //编写一个方法，将消息发送给服务端
+                                    messageClientService.sendMessageToOne(content,userId,getterId);
                                     break;
                                 case "4":
                                     System.out.println("\t\t 4 发送文件");
