@@ -39,7 +39,8 @@ public class MessageClientService {
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
         String time;
         message.setSendTime(time = sdf.format(new Date()));
-        System.out.println( ":=>["+time + "]<=:" + senderId + "对 " + getterId+"说: " + content);
+        // 私聊
+        System.out.println("私聊[" + time + "]:=> " + senderId + " 对 " + getterId + " 说: " + content);
         //发送给服务端
         //拿到socket
         try {
@@ -69,7 +70,8 @@ public class MessageClientService {
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
         String time;
         message.setSendTime(time = sdf.format(new Date()));
-        System.out.println( ":=>["+ time + "]<=:" + senderId + "对大家说" + content);
+        // 群发
+        System.out.println("群发[" + time + "]:=> " + senderId + " 对大家说: " + content);
         //发送给服务端
         //拿到socket
         try {
