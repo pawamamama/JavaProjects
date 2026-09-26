@@ -27,6 +27,12 @@ public class ManageClientThreads {
     public static void removeClientThread(String userId){
         hm.remove(userId);
     }
+    //获取所有线程
+
+    public static HashMap<String, ServerConnectClientThread> getHm() {
+        return hm;
+    }
+
     //获取该线程，根据userid返回线程
     public static ServerConnectClientThread getServerConnectClientThread(String userId){
         return hm.get(userId);

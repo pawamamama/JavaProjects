@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Class: ServerConnectClientTherad
@@ -56,6 +58,23 @@ public class ServerConnectClientThread extends Thread {
                     //写入到数据通道
                     final ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
                     oos.writeObject(message1);
+                } else if (message.getMesType().equals(MessageType.MESSAGE_TO_ALL_MES)) {//群发消息
+                    //取出所有在线用户的线程类
+                    //获取线程
+                    final HashMap<String, ServerConnectClientThread> hm = ManageClientThreads.getHm();
+                    //遍历所有线程，排除发送人
+                    for (Map.Entry<String, ServerConnectClientThread> entry : hm.entrySet()) {
+                        //是发送者就跳出过这次发送
+                        if (entry.getKey().equals(message.getSender())) {
+                            continue;
+                        }
+                        //通过集合中存放的value 得到所有在线用户的输出流，并转发该消息
+                        final ObjectOutputStream oos
+                                //先获取socket再获取输出流
+                                = new ObjectOutputStream(entry.getValue().getSocket().getOutputStream());
+                        //转发消息给接收者
+                        oos.writeObject(message);//如果客户不在线，可以保存到数据库，可以实现离线留言，上线再发送
+                    }
                 } else if (message.getMesType().equals(MessageType.MESSAGE_COMM_MES)) {//普通私聊
                     //转发消息
                     //根据对应message获取getterId，得到对应线程
