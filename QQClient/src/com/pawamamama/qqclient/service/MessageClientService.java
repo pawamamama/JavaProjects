@@ -52,4 +52,34 @@ public class MessageClientService {
             e.printStackTrace();
         }
     }
+    //群发消息方法
+    /**
+     *
+     * @param content 消息内容
+     * @param senderId 发送者
+     */
+    public void sendTOAll(String content,String senderId) {
+        //构建message
+        final Message message = new Message();
+        //设置类型
+        message.setMesType(MessageType.MESSAGE_TO_ALL_MES);//群发消息
+        message.setSender(senderId);
+        message.setContent(content);
+        //时间格式化
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        String time;
+        message.setSendTime(time = sdf.format(new Date()));
+        System.out.println( ":=>["+ time + "]<=:" + senderId + "对大家说" + content);
+        //发送给服务端
+        //拿到socket
+        try {
+            final ObjectOutputStream oos =
+                    new ObjectOutputStream(
+                            ManageClientServerThread.getClilentServerThread(senderId)
+                                    .getSocket().getOutputStream());
+            oos.writeObject(message);//发送
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
